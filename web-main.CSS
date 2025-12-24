@@ -53,12 +53,15 @@ input:checked + .expandable-btn .btn-title{
   border-right: 4px solid rgb(225, 225, 225);
 }
 
-.timeline-item{
+.timeline-item,
+.timeline-item-done{
   padding-top: 20px;
   position: relative;
   margin-bottom: 40px;
   padding-right: 40px;
 }
+
+.timeline-item-done::before,
 .timeline-item::before{
   content: '';
   position: absolute;
@@ -68,9 +71,13 @@ input:checked + .expandable-btn .btn-title{
   width: 30px;
   background-color: rgb(225, 225, 225);
   color: #333;
+ 
+}
+.timeline-item-done::before{
   box-shadow: 0 0 10px 5px rgb(225, 225, 225);
 }
 
+.timeline-item-done .period,
 .timeline-item .period {
   font-size: 14px;
   font-weight: 600;
@@ -78,12 +85,13 @@ input:checked + .expandable-btn .btn-title{
   border-right: 2px solid ;
   padding-right: 5px;
 }
-
+.timeline-item-done .title,
 .timeline-item .title{
   font-size: 24px;
   font-weight: 700;
    margin-bottom: 8px;
 }
+.timeline-item-done .description,
 .timeline-item .description{
   font-size: 14px;
   font-weight: 400;
