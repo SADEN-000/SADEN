@@ -15,177 +15,329 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <div class="container">
-        <a href="#" class="logo">سَـادِنْ</a>
-        <p class="tagline1"> هذا الموقع هو الأرشيف الفعلي لما أنجزه.</p>
+    <header>
+      <div class="header-container">
+        <h1 href="#" class="logo">سَـادِنْ</h1>
+        <h2 class="tagline1"> هذا الموقع هو الأرشيف الفعلي لما أنجزه.</h2>
         <a href="#" class="lang">العربية</a>
       </div>
+
+      <nav aria-label="Main navigation" class="navbar-container">
+        <ul class="nav-links">
+          <li><a href="#my-plans">كروت التعريف - الخطط</a></li>
+          <li><a href="#my-timeline">خارطة الطريق - المشاريع</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <nav class="main-navbar">
-      <ul class="nav-links">
-        <li><a href="#">كروت التعريف - الخطط</a></li>
-        <li><a href="#">خارطة الطريق - المشاريع</a></li>
-      </ul>
-    </nav>
-
-    <section class="buttons-flex">
-
-      <input type="checkbox" id="btn-1">
-      <label for="btn-1" class="expandable-btn">
-        <div class="btn-title">الشيفرة الشخصية..</div>
-        <div class="btn-content">سَـادِنْ.. اسم يعني لغويًا "خادم الكعبة" أو "حامي المقدس".
-        اخترت هذا الاسم في عالمي الرقمي لأنني أؤمن بحماية المبادئ وحراسة الأهداف.
-        انا كيان INTJ واقعي، يسعى لحماية وقته ومستقبله كما يحمي السادن امانته.
-        هنا.. انا الحامي، وانا البنّاء.</div>
-      </label>
-
-      <input type="checkbox" id="btn-2">
-      <label for="btn-2" class="expandable-btn">
-        <div class="btn-title">المسار الاستراتيجي..</div>
-        <div class="btn-content">الهدف ليس مجرد وظيفة، بل مركز قيادة.
-        البوصلة تشير نحو منصب Tech Lead و CTO خلال السنوات القادمة.
-        الرحلة بدأت، والمسار مرسوم بدقة..
-        من تعلم الأساسيات إلى قيادة الفرق التقنية.
-        كل سطر كود اكتبه اليوم هو درجة في سلم الصعود نحو القمة.</div>
-      </label>
-
-      <input type="checkbox" id="btn-3">
-      <label for="btn-3" class="expandable-btn">
-        <div class="btn-title">العقيدة والغاية..</div>
-        <div class="btn-content">هذا الموقع هو "السجل الحي" لرحلة الصعود.
-        الانطلاقة الفعلية كانت 1 ديسمبر 2025.
-        هنا اوثق تحولي من "هاوٍ" إلى "مهندس محترف".
-        الموقع سيتم تحديثه شهريًا ليكون شاهدًا على الالتزام، ودليلاً ملموسًا على ان العمل المستمر يصنع المعجزات.</div>
-      </label>
-
-      <input type="checkbox" id="btn-4">
-      <label for="btn-4" class="expandable-btn">
-        <div class="btn-title">البنية التحتية..</div>
-        <div class="btn-content">ما تراه امامك ليس قالبًا جاهزًا.
-        هذا الموقع بُني بالكامل يدويًا باستخدام HTML & CSS فقط.
-        نتاج 7 أيام من التركيز المكثف بمتوسط 4 ساعات يومياً.
-        تصميم بسيط، كود نظيف، واداء سريع..  جودته تكمن في التفاصيل، رغم بساطته.</div>
-      </label>
-
-      <input type="checkbox" id="btn-5">
-      <label for="btn-5" class="expandable-btn">
-        <div class="btn-title">الوقود الفكري..</div>
-        <div class="btn-content">البرمجة هي الأداة، لكن العقل هو المحرك.
-        سَـادِنْ لا يكتفي بكتابة الكود، بل يغذي عقله بنهم مستمر.
-        اهتماماته تتجاوز الشاشات.. من دراسة الاقتصاد والأنظمة المالية، إلى الغوص في الفلسفة، حتى الاساليب الفكرية وتعلم اللغات.
-        يؤمن أن العقل السليم هو الذي يفهم كيف يدور العالم.</div>
-      </label>
-
-      <input type="checkbox" id="btn-6">
-      <label for="btn-6" class="expandable-btn">
-        <div class="btn-title">بروتوكول التواصل..</div>
-        <div class="btn-content">علاقاتي تخضع لقانون "القيمة مقابل الوقت".
-        انا لست متاحًا للأحاديث الجانبية التي تستهلك الطاقة بلا طائل.
-        قد انقطع عن التواصل لفترات طويلة.. احتراماً لانشغالي ببناء الذات.
-        اقدر النقاشات العميقة والمركزة، وما عدا ذلك.. أفضل الصمت والعمل.</div>
-      </label>
-
-    </section>
-
-    <section class="timeline-container">
     
-      <div class="timeline-item-done">
-          <div class="period">ديسمبر 2025</div>
-          <div class="title">أساسيات الـ HTML & CSS</div>
-          <div class="description">بناء الأساسيات القوية للويب. تعلم البنية الصحيحة والتصميم الأساسي. هذا الشهر يركز على فهم المبادئ الأولى.</div>
-          <div class="skills"><strong>المهارات المتعلمة:</strong> HTML Structure & Semantic Tags, Basic CSS Styling (Colors & Fonts), Flexbox Fundamentals, Media Queries & Responsive Basics, Hover & Active States, Checkbox Hack for Interactivity, External Stylesheets Organization</div>
-      </div>
 
-      <div class="timeline-item">
-          <div class="period">يناير 2026</div>
-          <div class="title">إتقان الـ HTML & CSS</div>
-          <div class="description">التقدم في التعلم والبناء فوق ماسبق من معرفة. الوصول الى الاتقان والاحتراف في اللغتين. هذا الشهر يركز على المهارات المتقدمة والاحترافية.</div>
-          <div class="skills"><strong>المهارات المطلوبة:</strong> Semantic HTML & Accessibility, BEM Methodology for Code Organization, CSS Variables (Custom Properties), CSS Positioning (Relative, Absolute, Fixed, Sticky), Box Model Deep Understanding, Relative Units (rem, em, %, vh, vw), Flexbox Mastery, CSS Grid Fundamentals, CSS Logical Functions (clamp, min, max), Pseudo-elements (::before, ::after), Pseudo-classes (:hover, :focus, :nth-child), Stacking Context & z-index, Aspect Ratio & Object-fit, Mobile First & Advanced Media Queries</div>
-      </div>
+    <main>
+      <section id="my-plans" class="buttons-flex">
+        <details><summary>ملاحظة</summary>يمكنك الضغط على الكروت لترى محتواها:</details>
 
-      <div class="timeline-item">
-          <div class="period">فبراير 2026</div>
-          <div class="title">Core JavaScript (ES6+)</div>
-          <div class="description">إتقان الأساسيات العميقة للـ JavaScript - اللغة التي تبني عليها كل الويب. فهم المنطق البرمجي الأساسي الذي سيكون أساس كل المشاريع القادمة.</div>
-          <div class="skills"><strong>المهارات المطلوبة:</strong> Variables, Functions, Arrow Functions, Async/Await, Promises, Array Methods (map, filter, reduce), Destructuring, Spread Operator, Classes</div>
-      </div>
+        <input type="checkbox" id="btn-1">
+        <label for="btn-1" class="expandable-btn">
+          <h2 class="btn-title">الشيفرة الشخصية..</h2>
+          <p class="btn-content">سَـادِنْ.. اسم يعني لغويًا "خادم الكعبة" أو "حامي المقدس".
+          اخترت هذا الاسم في عالمي الرقمي لأنني أؤمن بحماية المبادئ وحراسة الأهداف.
+          انا كيان INTJ واقعي، يسعى لحماية وقته ومستقبله كما يحمي السادن امانته.
+          هنا.. انا الحامي، وانا البنّاء.</p>
+        </label>
 
-      <div class="timeline-item">
-          <div class="period">مارس 2026</div>
-          <div class="title">TypeScript & Type Safety</div>
-          <div class="description">الانتقال من الـ Dynamic JavaScript للـ Static Typing. هذه المرحلة تقلل الأخطاء بنسبة 70% وتجعل الكود آمناً وسهل الصيانة. سوق العمل 2026 يفضل TypeScript على Vanilla JavaScript بشكل كامل.</div>
-          <div class="skills"><strong>المهارات المطلوبة:</strong> Basic Types, Interfaces, Generics, Type Inference, Strict Mode, Utility Types, Type Guards</div>
-      </div>
+        <input type="checkbox" id="btn-2">
+        <label for="btn-2" class="expandable-btn">
+          <h2 class="btn-title">المسار الاستراتيجي..</h2>
+          <p class="btn-content">الهدف ليس مجرد وظيفة، بل مركز قيادة.
+          البوصلة تشير نحو منصب Tech Lead و CTO خلال السنوات القادمة.
+          الرحلة بدأت، والمسار مرسوم بدقة..
+          من تعلم الأساسيات إلى قيادة الفرق التقنية.
+          كل سطر كود اكتبه اليوم هو درجة في سلم الصعود نحو القمة.</p>
+        </label>
 
-      <div class="timeline-item">
-          <div class="period">أبريل 2026</div>
-          <div class="title">Next.js Foundations + Tailwind CSS</div>
-          <div class="description">الانتقال من Vanilla React إلى Next.js - الإطار العمل الموصى به رسمياً من React. إضافة Tailwind CSS لبناء تصاميم احترافية وسريعة. في هذه المرحلة يبدأ بناء تطبيقات حقيقية.</div>
-          <div class="skills"><strong>المهارات المطلوبة:</strong> App Router, File-based Routing, Server Components, Client Components (use client), API Routes, Tailwind Configuration, Responsive Design</div>
-      </div>
+        <input type="checkbox" id="btn-3">
+        <label for="btn-3" class="expandable-btn">
+          <h2 class="btn-title">العقيدة والغاية..</h2>
+          <p class="btn-content">هذا الموقع هو "السجل الحي" لرحلة الصعود.
+          الانطلاقة الفعلية كانت 1 ديسمبر 2025.
+          هنا اوثق تحولي من "هاوٍ" إلى "مهندس محترف".
+          الموقع سيتم تحديثه شهريًا ليكون شاهدًا على الالتزام، ودليلاً ملموسًا على ان العمل المستمر يصنع المعجزات.</p>
+        </label>
 
-      <div class="timeline-item">
-          <div class="period">مايو 2026</div>
-          <div class="title">PostgreSQL & Prisma ORM</div>
-          <div class="description">تعلم قاعدة البيانات الحقيقية المطلوبة في سوق العمل الاحترافي. استخدام Prisma ORM لتبسيط التعامل مع SQL وجعلها سهلة مع TypeScript. هذه المرحلة تحول المطور من واجهات أمامية إلى Full-Stack.</div>
-          <div class="skills"><strong>المهارات المطلوبة:</strong> Database Design, Schema Creation, Prisma Client, CRUD Operations, Relations (One-to-Many, Many-to-Many), Database Migrations</div>
-      </div>
+        <input type="checkbox" id="btn-4">
+        <label for="btn-4" class="expandable-btn">
+          <h2 class="btn-title">البنية التحتية..</h2>
+          <p class="btn-content">ما تراه امامك ليس قالبًا جاهزًا.
+          هذا الموقع بُني بالكامل يدويًا باستخدام HTML & CSS فقط.
+          نتاج 7 أيام من التركيز المكثف بمتوسط 4 ساعات يومياً.
+          تصميم بسيط، كود نظيف، واداء سريع..  جودته تكمن في التفاصيل، رغم بساطته.</p>
+        </label>
 
-      <div class="timeline-item">
-          <div class="period">يونيو 2026</div>
-          <div class="title">Security & Authentication (NextAuth)</div>
-          <div class="description">تأمين التطبيقات من الهجمات والثغرات. تعلم إدارة API Keys، User Authentication، و Rate Limiting. هذه المرحلة حرجة لتجنب تسريب المعلومات والفواتير الضخمة من الخوادم.</div>
-          <div class="skills"><strong>المهارات المطلوبة:</strong> NextAuth.js Configuration, Sessions, JWT Tokens, Environment Variables Management, Zod Validation, Protected Routes, CSRF Protection, Rate Limiting</div>
-      </div>
+        <input type="checkbox" id="btn-5">
+        <label for="btn-5" class="expandable-btn">
+          <h2 class="btn-title">الوقود الفكري..</h2>
+          <p class="btn-content">البرمجة هي الأداة، لكن العقل هو المحرك.
+          سَـادِنْ لا يكتفي بكتابة الكود، بل يغذي عقله بنهم مستمر.
+          اهتماماته تتجاوز الشاشات.. من دراسة الاقتصاد والأنظمة المالية، إلى الغوص في الفلسفة، حتى الاساليب الفكرية وتعلم اللغات.
+          يؤمن أن العقل السليم هو الذي يفهم كيف يدور العالم.</p>
+        </label>
 
-      <div class="timeline-item">
-          <div class="period">يوليو 2026</div>
-          <div class="title">AI Integration & APIs</div>
-          <div class="description">إضافة الذكاء الاصطناعي للتطبيقات - هذا يرفع قيمة المطور في سوق العمل بشكل كبير جداً. تعلم استخدام OpenAI API و Vercel AI SDK بأمان وكفاءة عالية.</div>
-          <div class="skills"><strong>المهارات المطلوبة:</strong> OpenAI API Integration, Vercel AI SDK, Streaming Responses, Error Handling, Cost Optimization, Prompt Engineering Basics</div>
-      </div>
+        <input type="checkbox" id="btn-6">
+        <label for="btn-6" class="expandable-btn">
+          <h2 class="btn-title">بروتوكول التواصل..</h2>
+          <p class="btn-content">علاقاتي تخضع لقانون "القيمة مقابل الوقت".
+          انا لست متاحًا للأحاديث الجانبية التي تستهلك الطاقة بلا طائل.
+          قد انقطع عن التواصل لفترات طويلة.. احتراماً لانشغالي ببناء الذات.
+          اقدر النقاشات العميقة والمركزة، وما عدا ذلك.. أفضل الصمت والعمل.</p>
+        </label>
 
-      <div class="timeline-item">
-          <div class="period">أغسطس 2026</div>
-          <div class="title">Project 1: Smart Dashboard</div>
-          <div class="description">أول تطبيق احترافي يجمع كل المهارات المتعلمة سابقاً. لوحة تحكم ذكية تعرض بيانات من قاعدة البيانات مع رؤى مدفوعة بـ AI. هذا المشروع يدخل في Portfolio الشخصي ويعرض القدرات الحقيقية.</div>
-          <div class="skills"><strong>يتضمن:</strong> Next.js App Router, PostgreSQL + Prisma, Real-time Data Visualization, AI-driven Insights, User Authentication, Responsive Design with Tailwind</div>
-      </div>
-
-      <div class="timeline-item">
-          <div class="period">سبتمبر 2026</div>
-          <div class="title">Project 2: SaaS Platform</div>
-          <div class="description">تطبيق متقدم مع نظام الاشتراكات والدفع. هذا المشروع يعرض فهماً عميقاً لـ Business Models والتطبيقات التجارية. سوق العمل يبحث عن developers يفهمون كيفية بناء منصات مربحة.</div>
-          <div class="skills"><strong>يتضمن:</strong> User Authentication & Authorization, Subscription System, Payment Integration, Admin Dashboard, Email Notifications, Multi-tenant Architecture</div>
-      </div>
-
-      <div class="timeline-item">
-          <div class="period">أكتوبر 2026</div>
-          <div class="title">Project 3: Educational AI App</div>
-          <div class="description">تطبيق تفاعلي يستخدم الذكاء الاصطناعي لـ Auto-grading والتغذية الراجعة الفورية. هذا المشروع يعرض الابتكار والقدرة على دمج تقنيات متقدمة. يمكن بيعه أو استخدامه كـ Portfolio piece قوي جداً.</div>
-          <div class="skills"><strong>يتضمن:</strong> Quiz/Test Logic, AI Feedback Generation, Progress Tracking, Leaderboards, Real-time Grading, User Analytics, Interactive UI</div>
-      </div>
-
-      <div class="timeline-item">
-          <div class="period">نوفمبر 2026</div>
-          <div class="title">Refinement & Deployment</div>
-          <div class="description">تحسين وصقل المشاريع الثلاثة. إضافة تفاصيل دقيقة في User Experience والـ Design. اختبار شامل وإصلاح الأخطاء. الهدف: 3 مشاريع مصقولة احترافية جاهزة للعرض على أصحاب الشركات.</div>
-          <div class="skills"><strong>التركيز على:</strong> Performance Optimization, SEO Implementation, Accessibility (a11y), Bug Fixes & Testing, Code Refactoring, Vercel Deployment, Security Audits</div>
-      </div>
-
-      <div class="timeline-item">
-          <div class="period">ديسمبر 2026</div>
-          <div class="title">Job Hunt & Tech Lead Preparation</div>
-          <div class="description">بداية البحث الفعلي عن الفرص الوظيفية. هذه المرحلة تشمل مراجعة نهائية شاملة وتحضير شامل للمقابلات. بحلول نهاية 2026، المطور يصبح Full-Stack Developer محترف جاهز تماماً لسوق العمل.</div>
-          <div class="skills"><strong>التركيز على:</strong> Technical Interview Preparation, Algorithm Fundamentals, System Design Basics, Portfolio Presentation, LinkedIn Optimization, Networking & Community Building</div>
-      </div>
+      </section>
       
-    </section>
-    
+      <section id="my-timeline" class="timeline-container">
+      
+        <article class="timeline-item-done">
+            <time class="period" datetime="2025-12" >ديسمبر 2025</time>
+            <h2 class="title">أساسيات الـ HTML & CSS</h2>
+            <p class="description">بناء الأساسيات القوية للويب. تعلم البنية الصحيحة والتصميم الأساسي. هذا الشهر يركز على فهم المبادئ الأولى.</p>
+            <div class="skills">
+                <strong>المهارات المتعلمة:</strong>
+                <ul>
+                    <li><abbr title="HyperText Markup Language">HTML</abbr> Structure & Semantic Tags</li>
+                    <li>Basic <abbr title="Cascading Style Sheets">CSS</abbr> Styling (Colors & Fonts)</li>
+                    <li>Flexbox Fundamentals</li>
+                    <li>Media Queries & Responsive Basics</li>
+                    <li>Hover & Active States</li>
+                    <li>Checkbox Hack for Interactivity</li>
+                    <li>External Stylesheets Organization</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-01">يناير 2026</time>
+            <h2 class="title">إتقان الـ HTML & CSS</h2>
+            <p class="description">التقدم في التعلم والبناء فوق ماسبق من معرفة. الوصول الى الاتقان والاحتراف في اللغتين. هذا الشهر يركز على المهارات المتقدمة والاحترافية.</p>
+            <div class="skills">
+                <strong>المهارات المطلوبة:</strong>
+                <ul>
+                    <li>Semantic <abbr title="HyperText Markup Language">HTML</abbr> & Accessibility</li>
+                    <li>BEM Methodology for Code Organization</li>
+                    <li><abbr title="Cascading Style Sheets">CSS</abbr> Variables (Custom Properties)</li>
+                    <li><abbr title="Cascading Style Sheets">CSS</abbr> Positioning (Relative, Absolute, Fixed, Sticky)</li>
+                    <li>Box Model Deep Understanding</li>
+                    <li>Relative Units (rem, em, %, vh, vw)</li>
+                    <li>Flexbox Mastery</li>
+                    <li><abbr title="Cascading Style Sheets">CSS</abbr> Grid Fundamentals</li>
+                    <li><abbr title="Cascading Style Sheets">CSS</abbr> Logical Functions (clamp, min, max)</li>
+                    <li>Pseudo-elements (::before, ::after)</li>
+                    <li>Pseudo-classes (:hover, :focus, :nth-child)</li>
+                    <li>Stacking Context & z-index</li>
+                    <li>Aspect Ratio & Object-fit</li>
+                    <li>Mobile First & Advanced Media Queries</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-02">فبراير 2026</time>
+            <h2 class="title">Core JavaScript (ES6+)</h2>
+            <p class="description">إتقان الأساسيات العميقة للـ JavaScript - اللغة التي تبني عليها كل الويب. فهم المنطق البرمجي الأساسي الذي سيكون أساس كل المشاريع القادمة.</p>
+            <div class="skills">
+                <strong>المهارات المطلوبة:</strong>
+                <ul>
+                    <li>Variables</li>
+                    <li>Functions</li>
+                    <li>Arrow Functions</li>
+                    <li>Async/Await</li>
+                    <li>Promises</li>
+                    <li>Array Methods (map, filter, reduce)</li>
+                    <li>Destructuring</li>
+                    <li>Spread Operator</li>
+                    <li>Classes</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-03">مارس 2026</time>
+            <h2 class="title">TypeScript & Type Safety</h2>
+            <p class="description">الانتقال من الـ Dynamic JavaScript للـ Static Typing. هذه المرحلة تقلل الأخطاء بنسبة 70% وتجعل الكود آمناً وسهل الصيانة. سوق العمل 2026 يفضل TypeScript على Vanilla JavaScript بشكل كامل.</p>
+            <div class="skills">
+                <strong>المهارات المطلوبة:</strong>
+                <ul>
+                    <li>Basic Types</li>
+                    <li>Interfaces</li>
+                    <li>Generics</li>
+                    <li>Type Inference</li>
+                    <li>Strict Mode</li>
+                    <li>Utility Types</li>
+                    <li>Type Guards</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-04">أبريل 2026</time>
+            <h2 class="title">Next.js Foundations + Tailwind CSS</h2>
+            <p class="description">الانتقال من Vanilla React إلى Next.js - الإطار العمل الموصى به رسمياً من React. إضافة Tailwind CSS لبناء تصاميم احترافية وسريعة. في هذه المرحلة يبدأ بناء تطبيقات حقيقية.</p>
+            <div class="skills">
+                <strong>المهارات المطلوبة:</strong>
+                <ul>
+                    <li>App Router</li>
+                    <li>File-based Routing</li>
+                    <li>Server Components</li>
+                    <li>Client Components (use client)</li>
+                    <li><abbr title="Application Programming Interface">API</abbr> Routes</li>
+                    <li>Tailwind Configuration</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-05">مايو 2026</time>
+            <h2 class="title">PostgreSQL & Prisma ORM</h2>
+            <p class="description">تعلم قاعدة البيانات الحقيقية المطلوبة في سوق العمل الاحترافي. استخدام Prisma ORM لتبسيط التعامل مع SQL وجعلها سهلة مع TypeScript. هذه المرحلة تحول المطور من واجهات أمامية إلى Full-Stack.</p>
+            <div class="skills">
+                <strong>المهارات المطلوبة:</strong>
+                <ul>
+                    <li>Database Design</li>
+                    <li>Schema Creation</li>
+                    <li>Prisma Client</li>
+                    <li><abbr title="Create, Read, Update, Delete">CRUD</abbr> Operations</li>
+                    <li>Relations (One-to-Many, Many-to-Many)</li>
+                    <li>Database Migrations</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-06">يونيو 2026</time>
+            <h2 class="title">Security & Authentication (NextAuth)</h2>
+            <p class="description">تأمين التطبيقات من الهجمات والثغرات. تعلم إدارة API Keys، User Authentication، و Rate Limiting. هذه المرحلة حرجة لتجنب تسريب المعلومات والفواتير الضخمة من الخوادم.</p>
+            <div class="skills">
+                <strong>المهارات المطلوبة:</strong>
+                <ul>
+                    <li>NextAuth.js Configuration</li>
+                    <li>Sessions</li>
+                    <li><abbr title="JSON Web Token">JWT</abbr> Tokens</li>
+                    <li>Environment Variables Management</li>
+                    <li>Zod Validation</li>
+                    <li>Protected Routes</li>
+                    <li><abbr title="Cross-Site Request Forgery">CSRF</abbr> Protection</li>
+                    <li>Rate Limiting</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-07">يوليو 2026</time>
+            <h2 class="title">AI Integration & APIs</h2>
+            <p class="description">إضافة الذكاء الاصطناعي للتطبيقات - هذا يرفع قيمة المطور في سوق العمل بشكل كبير جداً. تعلم استخدام OpenAI API و Vercel AI SDK بأمان وكفاءة عالية.</p>
+            <div class="skills">
+                <strong>المهارات المطلوبة:</strong>
+                <ul>
+                    <li>OpenAI <abbr title="Application Programming Interface">API</abbr> Integration</li>
+                    <li>Vercel <abbr title="Artificial Intelligence">AI</abbr> SDK</li>
+                    <li>Streaming Responses</li>
+                    <li>Error Handling</li>
+                    <li>Cost Optimization</li>
+                    <li>Prompt Engineering Basics</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-08">أغسطس 2026</time>
+            <h2 class="title">Project 1: Smart Dashboard</h2>
+            <p class="description">أول تطبيق احترافي يجمع كل المهارات المتعلمة سابقاً. لوحة تحكم ذكية تعرض بيانات من قاعدة البيانات مع رؤى مدفوعة بـ AI. هذا المشروع يدخل في Portfolio الشخصي ويعرض القدرات الحقيقية.</p>
+            <div class="skills">
+                <strong>يتضمن:</strong>
+                <ul>
+                    <li>Next.js App Router</li>
+                    <li>PostgreSQL + Prisma</li>
+                    <li>Real-time Data Visualization</li>
+                    <li><abbr title="Artificial Intelligence">AI</abbr>-driven Insights</li>
+                    <li>User Authentication</li>
+                    <li>Responsive Design with Tailwind</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-09">سبتمبر 2026</time>
+            <h2 class="title">Project 2: SaaS Platform</h2>
+            <p class="description">تطبيق متقدم مع نظام الاشتراكات والدفع. هذا المشروع يعرض فهماً عميقاً لـ Business Models والتطبيقات التجارية. سوق العمل يبحث عن developers يفهمون كيفية بناء منصات مربحة.</p>
+            <div class="skills">
+                <strong>يتضمن:</strong>
+                <ul>
+                    <li>User Authentication & Authorization</li>
+                    <li>Subscription System</li>
+                    <li>Payment Integration</li>
+                    <li>Admin Dashboard</li>
+                    <li>Email Notifications</li>
+                    <li>Multi-tenant Architecture</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-10">أكتوبر 2026</time>
+            <h2 class="title">Project 3: Educational AI App</h2>
+            <p class="description">تطبيق تفاعلي يستخدم الذكاء الاصطناعي لـ Auto-grading والتغذية الراجعة الفورية. هذا المشروع يعرض الابتكار والقدرة على دمج تقنيات متقدمة. يمكن بيعه أو استخدامه كـ Portfolio piece قوي جداً.</p>
+            <div class="skills">
+                <strong>يتضمن:</strong>
+                <ul>
+                    <li>Quiz/Test Logic</li>
+                    <li><abbr title="Artificial Intelligence">AI</abbr> Feedback Generation</li>
+                    <li>Progress Tracking</li>
+                    <li>Leaderboards</li>
+                    <li>Real-time Grading</li>
+                    <li>User Analytics</li>
+                    <li>Interactive UI</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-11">نوفمبر 2026</time>
+            <h2 class="title">Refinement & Deployment</h2>
+            <p class="description">تحسين وصقل المشاريع الثلاثة. إضافة تفاصيل دقيقة في User Experience والـ Design. اختبار شامل وإصلاح الأخطاء. الهدف: 3 مشاريع مصقولة احترافية جاهزة للعرض على أصحاب الشركات.</p>
+            <div class="skills">
+                <strong>التركيز على:</strong>
+                <ul>
+                    <li>Performance Optimization</li>
+                    <li><abbr title="Search Engine Optimization">SEO</abbr> Implementation</li>
+                    <li>Accessibility (<abbr title="accessibility">a11y</abbr>)</li>
+                    <li>Bug Fixes & Testing</li>
+                    <li>Code Refactoring</li>
+                    <li>Vercel Deployment</li>
+                    <li>Security Audits</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="timeline-item">
+            <time class="period" datetime="2026-12">ديسمبر 2026</time>
+            <h2 class="title">Job Hunt & Tech Lead Preparation</h2>
+            <p class="description">بداية البحث الفعلي عن الفرص الوظيفية. هذه المرحلة تشمل مراجعة نهائية شاملة وتحضير شامل للمقابلات. بحلول نهاية 2026، المطور يصبح Full-Stack Developer محترف جاهز تماماً لسوق العمل.</p>
+            <div class="skills">
+                <strong>التركيز على:</strong>
+                <ul>
+                    <li>Technical Interview Preparation</li>
+                    <li>Algorithm Fundamentals</li>
+                    <li>System Design Basics</li>
+                    <li>Portfolio Presentation</li>
+                    <li>LinkedIn Optimization</li>
+                    <li>Networking & Community Building</li>
+                </ul>
+            </div>
+        </article>
+      </section>
+    </main>
+
     <footer class="outro-container">
-      <p>والى هنا انتهي من بناء هذا الموقع بتاريخ 23 ديسمبر 2025</p>
+      <p>والى هنا انتهي من بناء هذا الموقع بتاريخ <time datetime="2025-12-23">23 ديسمبر 2025</time></p>
       <p>والقاكم في التحديثات الشهرية.. في رعاية اللّٰه.</p>
     </footer>
 
