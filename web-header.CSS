@@ -5,8 +5,8 @@ header{
   left: 0;
   height: 100px;
   z-index: 1000;
-  background-color: rgb(225, 225, 225);
-  color: #333;
+  background-color: var(--ALT-BGCOLOR);
+  color: var(--BGCOLOR);
 }
 header .header-container{
   width: 95%;
@@ -21,26 +21,28 @@ header .header-container{
 }
 
 .header-container .logo {
-  color: #333;
-  border: 4px solid #333;
+  color: var(--BGCOLOR);
+  border: 4px solid var(--DARK-BORDER);
+  font-size: var( --FS-XXL);
   text-decoration: none;
   padding: 0 10px;
   transition: all 0.1s;
+  
 }
 .header-container .logo:hover{
-  color:rgb(225, 225, 225);
-  background-color: #333;
-  border: 4px solid black;
+  color: var(--ALT-BGCOLOR);
+  background-color: var(--BGCOLOR);
+  border: 4px solid var(--DARKER-BORDER);
   cursor: pointer;
 }
 .header-container .logo:active{
   opacity: 0.8;
 }
 .header-container .tagline1, .lang{
-  color: #333;
-  border-bottom: 2px solid #333;
+  color: var(--BGCOLOR);
+  border-bottom: 2px solid var(--DARK-BORDER);
   text-decoration: none;
-  font-size: 1.8rem; 
+  font-size: var(--FS-MD); 
   font-weight: 600;
   padding-bottom: 5px;
 } 
@@ -54,8 +56,8 @@ header .header-container{
 header .navbar-container{
   position: fixed;
   top: 120px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   width: fit-content;
   
   z-index: 900;
@@ -63,8 +65,8 @@ header .navbar-container{
   backdrop-filter:blur(5px);
   -webkit-backdrop-filter: blur(2px);
   
-  border: 1px solid rgba(225, 225, 225, 0.2);
-  box-shadow: 0 0 10px 5px rgba(225, 225, 225, 0.2);
+  border: 1px solid var(--LIGHT-BORDER);
+  box-shadow: 0 0 10px 5px var(--LIGHT-SHADOW);
   padding: 8px 24px;
 }
 
@@ -77,11 +79,11 @@ header .navbar-container{
 }
 .navbar-container .nav-links a{
   white-space: nowrap;
-  color:rgb(225, 225, 225);
+  color:var(--ALT-BGCOLOR);
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: var(--FS-MD);
   font-weight: 700;
-  border-bottom:1px solid rgba(225, 225, 225, 0.5);
+  border-bottom:1px solid var(--LIGHT-BORDER);
   padding: 3px 0;
 }
 
@@ -93,31 +95,31 @@ header .navbar-container{
   
 
   .header-container .logo{ 
-    font-size: 2.4rem; 
-    border: 3px solid #333;
+    font-size: var(--FS-XXL); 
+    border: 3px solid var(--DARK-BORDER);
     padding: 0 5px;
   }
   
   .header-container .logo:hover{
-     border: 3px solid black;
+     border: 3px solid var(--DARKER-BORDER);
   }
   
   .header-container .tagline1{ 
     position:unset;
     transform:unset;
-    font-size: 0.84rem;       
+    font-size: var(--FS-SM);       
     text-align: center;
     flex: 1; 
-    border-bottom: 1px solid #333;             
+    border-bottom: 1px solid var(--DARK-BORDER);             
     margin: 0 5px;
   }
 
   .header-container .lang{ 
-    font-size: 1.44rem; 
-    border-bottom: 1px solid #333;
+    font-size: var(--FS-REG); 
+    border-bottom: 1px solid var(--DARK-BORDER);
   }
 
   header .navbar-container{ top: 100px; padding: 6px 8px; }
   .navbar-container .nav-links{ gap:15px; }
-  .navbar-container .nav-links a{ font-size: 1.2rem; }
+  .navbar-container .nav-links a{ font-size: var(--FS-SM); }
 }
