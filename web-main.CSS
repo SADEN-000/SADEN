@@ -1,7 +1,12 @@
+.buttons-flex details{
+  font-size: 1.56rem;
+}
 .buttons-flex details summary{
   text-decoration:underline;
   cursor: pointer;
+  font-size: 1.56rem;
 }
+
 main .buttons-flex{
   display: flex;        
   flex-direction: column; 
@@ -36,7 +41,8 @@ input:checked + .expandable-btn{
   flex-shrink: 0;
   color: rgb(225, 225, 225);
   background-color: transparent;
-  font-size: 24px; font-weight: 600;
+  font-size: 2.4rem; 
+  font-weight: 600;
   padding-bottom: 5px;
   transition: all 0.35s;
 }
@@ -45,7 +51,7 @@ input:checked + .expandable-btn .btn-title{
   border-left: 1px solid #333;
 }
 .expandable-btn .btn-content{
-  font-size: clamp(14px, 1vw, 18px);
+  font-size: 1.32rem;
   font-weight: 600;
 }
 
@@ -83,7 +89,7 @@ main .timeline-container{
 
 .timeline-item-done .period,
 .timeline-item .period {
-  font-size: 14px;
+  font-size: 1.44rem;
   font-weight: 600;
   margin-bottom: 4px;
   border-right: 2px solid ;
@@ -91,13 +97,15 @@ main .timeline-container{
 }
 .timeline-item-done .title,
 .timeline-item .title{
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 700;
    margin-bottom: 8px;
 }
 .timeline-item-done .description,
-.timeline-item .description{
-  font-size: 14px;
+.timeline-item .description,
+.timeline-item-done .skills,
+.timeline-item .skills{
+  font-size: 1.56rem;
   font-weight: 400;
   color: lightgray;
 }
@@ -108,7 +116,7 @@ main .timeline-container{
   text-align: center;
 }
 .outro-container p{
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 800;
   padding-bottom: 5px;
 }
@@ -141,7 +149,7 @@ main .timeline-container{
   }
 
   .expandable-btn .btn-title {
-    font-size: 18px; 
+    font-size: 1.8rem; 
     line-height: 60px; 
     margin: 0;
     width: 100%;
@@ -167,23 +175,23 @@ main .timeline-container{
   }
   
   .expandable-btn .btn-content {
-    font-size: 16px; 
+    font-size: 1.56rem; 
     line-height: 1.6; 
     text-align: right; 
     color: #333;
   }
 
   .timeline-container { margin: 50px 40px; }
-  .timeline-item .period { font-size: 14px; }
-  .timeline-item .title{ font-size: 18px; }
-  .timeline-item .skills{ font-size: 14px; }
+  .timeline-item .skills,
+  .timeline-item .period { font-size: 1.44rem; }
+  .timeline-item .title{ font-size: 1.8rem; }
 
   .outro-container{
     border: 3px solid rgb(225, 225, 225);
     padding: 20px 10px;
   }
   .outro-container p{
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 800;
     padding-bottom: 3px;
   }
