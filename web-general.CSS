@@ -2,10 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
-:root{
+:root {
   /* FONT SIZES */
   --FS-SM: 1.4rem;   /* 14px */
   --FS-REG: 1.6rem;  /* 16px */
@@ -13,55 +12,70 @@
   --FS-LG: 2.4rem;   /* 24px */
   --FS-XL: 3.6rem;   /* 36px */
   --FS-XXL: 4.8rem;  /* 48px */
-  /*COLOR*/
+
+  /* COLOR */
   --BGCOLOR: #333;
   --ALT-BGCOLOR: rgb(225, 225, 225);
   --LIGHT-BORDER: var(--ALT-BGCOLOR);
   --DARK-BORDER: var(--BGCOLOR);
-  --DARKER-BORDER:black;
+  --DARKER-BORDER: black;
   --LIGHT-SHADOW: rgba(225, 225, 225, 0.35);
   --LIGHTER-SHADOW: rgb(225, 225, 225);
+
+  /* GENERAL */
+  --SPACING-2S: 0.2rem;  /* 2px */
+  --SPACING-XS: 0.4rem;  /* 4px */
+  --SPACING-SM: 0.8rem;  /* 8px */
+  --SPACING-MD: 1.6rem;  /* 16px */
+  --SPACING-LG: 2.4rem;  /* 24px */
+  --SPACING-XL: 3.2rem;  /* 32px */
+  --SPACING-HEIGHT-L: 5rem;  /* 50px */
+  --SPACING-HEIGHT-XL: 10rem;  /* 100px */
+  --SPACING-HEIGHT-2XL: 25rem;  /* 250px */
+  --HEADER-HEIGHT: 10.0rem; /* 100px */
   
 }
 
-@media (prefers-color-scheme: light){
-  :root{
-    --BGCOLOR: rgb(225, 225, 225);
-    --ALT-BGCOLOR:  #333 ;
-    --LIGHT-BORDER: var(--ALT-BGCOLOR);
-    --DARK-BORDER: var(--BGCOLOR);
-    --LIGHT-SHADOW: rgba(0, 0, 0, 0.35);
-    --LIGHTER-SHADOW: rgb(0, 0, 0);
-  }
-}
-
-/* NOTE
-
-  rgb(225, 225, 225);
-
-*/
-html{
+html {
   font-size: 62.5%;
+   /* هنا توجد مشكلة بشأن مكان التنقل في النافبار حيث يوجهني الى السيكشن المطلوب
+    لكنه يوجهني الى منتصفه وليس بداية ابلسيكشن */
+  scroll-behavior:smooth;
+  /* وهنا بعد بحث بسيط وجدت الحل لتلك المشكلة باستخدام هذا الكود */
+  scroll-padding-top: calc(var(--HEADER-HEIGHT) + 2.0rem);
 }
 
-body{
-  font-family:'Tajawal', sans-serif;
-  color:var(--ALT-BGCOLOR);
-  background-color:var(--BGCOLOR);
+body {
+  font-family: 'Tajawal', sans-serif;
+  color: var(--ALT-BGCOLOR);
+  background-color: var(--BGCOLOR);
   line-height: 1.6;
-  padding-top: 100px;
-  padding-bottom: 20px;
+  /* ربط البادنج بالهيدر لضمان التناسق */
+  padding-top: var(--HEADER-HEIGHT);
+  padding-bottom: var(--SPACING-MD);
 }
 
 @media (max-width: 850px) {
-  body { padding-top: 70px; }
-
   :root {
+    /* تحديث المتغير الأساسي للهيدر ليتبعه البودي تلقائياً */
+    --HEADER-HEIGHT: 7.0rem; 
+
     --FS-XXL: 3.2rem; 
     --FS-XL:  2.4rem; 
     --FS-LG:  1.8rem; 
     --FS-MD:  1.6rem; 
     --FS-REG: 1.4rem; 
     --FS-SM:  1.2rem; 
+    --FS-XS: 1rem;  /* 10px */
+  }
+}
+
+/* تم نقل الوان اللايت مود الى اسفل صفحة الجينيرال وسيتم اختبار الثيم على الهاتف بعد رفع الكود */
+@media (prefers-color-scheme: light){
+  :root {
+    --BGCOLOR: rgb(225, 225, 225);
+    --ALT-BGCOLOR: #333;
+    --LIGHT-SHADOW: rgba(0, 0, 0, 0.35);
+    --LIGHTER-SHADOW: rgb(0, 0, 0);
   }
 }

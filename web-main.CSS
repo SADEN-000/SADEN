@@ -11,26 +11,28 @@ main .buttons-flex{
   display: flex;        
   flex-direction: column; 
   align-items: flex-start; 
-  margin-top:100px;
-  gap: 10px;
+  margin-top: var(--HEADER-HEIGHT);
+  gap: var(--SPACING-SM);
 }
 
 .buttons-flex input{
   display: none;
 }
 .buttons-flex .expandable-btn{
-  width: 350px;
-  height: 100px;
-  overflow:hidden;
+  width: calc( (var(--SPACING-HEIGHT-XL)) + var(--SPACING-HEIGHT-2XL) ) ;
+  height: var(--SPACING-HEIGHT-XL);
+  
   box-shadow: 0 0 10px var(--LIGHT-SHADOW);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--SPACING-SM);
   transition: all 0.35s;
   text-align: center;
-  border: 3px solid var(--LIGHT-BORDER);
+  border: var(--SPACING-2S) solid var(--LIGHT-BORDER);
   cursor: pointer;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 var(--SPACING-SM);
+  overflow:hidden;
+
 }
 input:checked + .expandable-btn{
   width: 98%;
@@ -39,18 +41,20 @@ input:checked + .expandable-btn{
 }
 
 .expandable-btn .btn-title{
-  width: 350px;
+  width: calc( (var(--SPACING-HEIGHT-XL)) + var(--SPACING-HEIGHT-2XL)) ;
   flex-shrink: 0;
   color: var(--ALT-BGCOLOR);
   background-color: transparent;
   font-size: var(--FS-LG); 
   font-weight: 600;
-  padding-bottom: 5px;
+  padding-bottom: var(--SPACING-SM);
   transition: all 0.35s;
 }
-input:checked + .expandable-btn .btn-title{
+
+input:checked + .expandable-btn .btn-title,
+.expandable-btn .btn-content{
   color: var(--BGCOLOR);
-  border-left: 1px solid var(--DARK-BORDER);
+  border-left: calc(var(--SPACING-2S) - 0.1rem) solid var(--DARK-BORDER);
 }
 .expandable-btn .btn-content{
   font-size:var(--FS-SM);
@@ -61,72 +65,71 @@ input:checked + .expandable-btn .btn-title{
 main .timeline-container{
   display:flex ;
   flex-direction: column;
-  margin: 100px 50px;
-  border-right: 4px solid var(--LIGHT-BORDER);
+  margin: var(--SPACING-HEIGHT-XL) var(--SPACING-HEIGHT-L);
+  border-right: var(--SPACING-XS) solid var(--LIGHT-BORDER);
 }
 
-.timeline-item,
-.timeline-item-done{
-  padding-top: 20px;
+.timeline-item{
   position: relative;
-  margin-bottom: 40px;
-  padding-right: 40px;
+  margin-bottom: var(--SPACING-HEIGHT-L);
+  padding-right: calc(var(--SPACING-XL) + 0.8rem);
 }
 
-.timeline-item-done::before,
 .timeline-item::before{
   content: '';
   position: absolute;
-  top: 5px;
-  right:-17px;
-  height: 30px;
-  width: 30px;
+  top: 0;
+  right:-18px;
+  height: var(--SPACING-XL);
+  width: var(--SPACING-XL);
   background-color: var(--ALT-BGCOLOR);
   color: var(--BGCOLOR);
  
 }
-.timeline-item-done::before{
-  box-shadow: 0 0 10px 5px var(--LIGHTER-SHADOW);
-}
 
-.timeline-item-done .period,
 .timeline-item .period {
   font-size: var(--FS-SM);
   font-weight: 600;
-  margin-bottom: 4px;
-  border-right: 2px solid ;
-  padding-right: 5px;
+  margin-bottom: var(--SPACING-XS);
+  border-right: var(--SPACING-2S) solid ;
+  padding-right: var(--SPACING-XS);
 }
-.timeline-item-done .title,
+
 .timeline-item .title{
   font-size: var(--FS-LG);
   font-weight: 700;
-   margin-bottom: 8px;
+  margin-bottom: var(--SPACING-SM);
 }
-.timeline-item-done .description,
+
 .timeline-item .description,
-.timeline-item-done .skills,
 .timeline-item .skills{
   font-size: var(--FS-REG);
   font-weight: 400;
   color: var(--ALT-BGCOLOR);
 }
-.timeline-item-done .description,
+
 .timeline-item .description{
 font-size: var(--FS-SM);
 }
 
 .outro-container{
-  border: 4px solid var(--LIGHT-BORDER);
-  padding: 30px 10px;
+  border: var(--SPACING-XS) solid var(--LIGHT-BORDER);
+  padding: var(--SPACING-LG) var(--SPACING-SM);
   text-align: center;
 }
 .outro-container p{
   font-size: var(--FS-LG);
   font-weight: 800;
-  padding-bottom: 5px;
+  padding-bottom: var(--SPACING-XS);
 }
 
+.timeline-item:first-child::before{
+  box-shadow: 0 0 10px 5px var(--LIGHTER-SHADOW);
+}
+/* هذا الكود سيجعل الخيط يتوقف عند آخر عنصر */
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
 
 
 
@@ -136,18 +139,17 @@ font-size: var(--FS-SM);
   .buttons-flex {
     width: 90%;
     height: auto;
-    margin: 120px auto 20px auto; 
-    gap: 15px; 
+    margin: var(--SPACING-HEIGHT-L) auto ; 
   }
  
   .buttons-flex .expandable-btn {
     width: 100%;
-    height: 60px; 
+    height: var(--SPACING-HEIGHT-L);
     border: none; 
-    border-bottom: 1px solid var(--LIGHT-BORDER);
+    border-bottom: calc(var(--SPACING-2S) - 0.1rem) solid var(--LIGHT-BORDER);
     background-color: transparent;
     text-align: right;
-    padding: 0 10px;
+    padding: var(--SPACING-SM) var(--SPACING-SM);
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
@@ -155,28 +157,23 @@ font-size: var(--FS-SM);
 
   .expandable-btn .btn-title {
     font-size: var(--FS-LG); 
-    line-height: 60px; 
-    margin: 0;
     width: 100%;
-    
-    border: none; 
-    padding: 0;
+    border: none;
   }
 
   input:checked + .expandable-btn {
     height: auto;
     width: 100%;
-    padding-bottom: 20px; 
-    border-bottom: 2px solid var(--DARK-BORDER); 
+    padding-bottom: var(--SPACING-MD); 
+    border-bottom: var(--SPACING-2S) solid var(--DARK-BORDER); 
   }
   
   input:checked + .expandable-btn .btn-title {
     line-height: 2; 
-    margin-top: 15px; 
-    margin-bottom: 10px;
+    margin: var(--SPACING-SM); 
     font-weight: bold;
     border-left: transparent;
-    border-bottom: 1px solid var(--DARK-BORDER);
+    border-bottom: calc(var(--SPACING-2S) - 0.1rem) solid var(--DARK-BORDER);
   }
   
   .expandable-btn .btn-content {
@@ -186,21 +183,19 @@ font-size: var(--FS-SM);
     color: var(--BGCOLOR);
   }
 
-  .timeline-container { margin: 50px 40px; }
+  .timeline-container { margin: var(--SPACING-HEIGHT-L); }
   .timeline-item .title{ font-size: var(--FS-LG); }
   .timeline-item .period { font-size: var(--FS-REG);}
-  .timeline-item-done .description,
   .timeline-item .description{ font-size: var(--FS-SM); }
-  .timeline-item-done .skills,
   .timeline-item .skills{ font-size: var(--FS-REG);}
 
   .outro-container{
-    border: 3px solid var(--LIGHT-BORDER);
-    padding: 20px 10px;
+    border: calc(var(--SPACING-XS) - 0.1rem) solid var(--LIGHT-BORDER);
+    padding: var(--SPACING-MD) var(--SPACING-SM);
   }
   .outro-container p{
     font-size: var(--FS-SM);
     font-weight: 800;
-    padding-bottom: 3px;
+    padding-bottom: var(--SPACING-XS);
   }
 }
