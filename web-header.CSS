@@ -55,7 +55,7 @@ header .header-container{
 
 header .navbar-container{
   position: fixed;
-  top: calc(var(--HEADER-HEIGHT) + 2rem);
+  top: calc(var(--HEADER-HEIGHT) + var(--SPACING-LG));
   right: 50%;
   transform: translateX(50%);
   width: fit-content;
@@ -65,8 +65,8 @@ header .navbar-container{
   backdrop-filter:blur(5px);
   -webkit-backdrop-filter: blur(2px);
   
-  border: 1px solid var(--LIGHT-BORDER);
-  box-shadow: 0 0 10px 5px var(--LIGHT-SHADOW);
+  border: calc(var(--SPACING-2S) - 0.1rem) solid var(--MID-OPACITY-SH);
+  box-shadow: 0 0 10px 5px var(--LOW-OPACITY-SH);
   padding: var(--SPACING-SM) var(--SPACING-LG);
 }
 
@@ -83,7 +83,7 @@ header .navbar-container{
   text-decoration: none;
   font-size: var(--FS-MD);
   font-weight: 700;
-  border-bottom: calc(var(--SPACING-2S) - 0.1rem) solid var(--LIGHT-BORDER);
+  border-bottom: calc(var(--SPACING-2S) - 0.1rem) solid var(--MID-OPACITY-SH);
   padding: var(--SPACING-XS) 0;
 }
 
@@ -97,7 +97,7 @@ header .navbar-container{
   .header-container .logo{ 
     font-size: var(--FS-XXL); 
     border: calc(var(--SPACING-XS) - 0.1rem) solid var(--DARK-BORDER);
-    padding: var(--SPACING-2S) var(--SPACING-XS);
+    padding: 0 var(--SPACING-XS);
   }
   
   .header-container .logo:hover{

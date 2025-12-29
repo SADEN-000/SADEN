@@ -22,7 +22,7 @@ main .buttons-flex{
   width: calc( (var(--SPACING-HEIGHT-XL)) + var(--SPACING-HEIGHT-2XL) ) ;
   height: var(--SPACING-HEIGHT-XL);
   
-  box-shadow: 0 0 10px var(--LIGHT-SHADOW);
+  box-shadow: 0 0 10px var(--LOW-OPACITY-SH);
   display: flex;
   align-items: center;
   gap: var(--SPACING-SM);
@@ -51,14 +51,14 @@ input:checked + .expandable-btn{
   transition: all 0.35s;
 }
 
-input:checked + .expandable-btn .btn-title,
-.expandable-btn .btn-content{
+input:checked + .expandable-btn .btn-title{
   color: var(--BGCOLOR);
   border-left: calc(var(--SPACING-2S) - 0.1rem) solid var(--DARK-BORDER);
 }
 .expandable-btn .btn-content{
   font-size:var(--FS-SM);
   font-weight: 600;
+  text-align:justify;
 }
 
 
@@ -72,13 +72,13 @@ main .timeline-container{
 .timeline-item{
   position: relative;
   margin-bottom: var(--SPACING-HEIGHT-L);
-  padding-right: calc(var(--SPACING-XL) + 0.8rem);
+  padding-right: var(--SPACING-XL);
 }
 
 .timeline-item::before{
   content: '';
   position: absolute;
-  top: 0;
+  top: -2px;
   right:-18px;
   height: var(--SPACING-XL);
   width: var(--SPACING-XL);
@@ -109,7 +109,8 @@ main .timeline-container{
 }
 
 .timeline-item .description{
-font-size: var(--FS-SM);
+  font-size: var(--FS-SM);
+  text-align:justify;
 }
 
 .outro-container{
@@ -124,7 +125,7 @@ font-size: var(--FS-SM);
 }
 
 .timeline-item:first-child::before{
-  box-shadow: 0 0 10px 5px var(--LIGHTER-SHADOW);
+  box-shadow: 0 0 10px 5px var(--LIGHT-SHADOW);
 }
 /* هذا الكود سيجعل الخيط يتوقف عند آخر عنصر */
 .timeline-item:last-child {
@@ -144,11 +145,10 @@ font-size: var(--FS-SM);
  
   .buttons-flex .expandable-btn {
     width: 100%;
-    height: var(--SPACING-HEIGHT-L);
+    height: calc(var(--SPACING-HEIGHT-L) + var(--SPACING-SM) );
     border: none; 
     border-bottom: calc(var(--SPACING-2S) - 0.1rem) solid var(--LIGHT-BORDER);
     background-color: transparent;
-    text-align: right;
     padding: var(--SPACING-SM) var(--SPACING-SM);
     display: flex;
     flex-direction: column;
@@ -159,12 +159,13 @@ font-size: var(--FS-SM);
     font-size: var(--FS-LG); 
     width: 100%;
     border: none;
+    text-align: right;
   }
 
   input:checked + .expandable-btn {
     height: auto;
     width: 100%;
-    padding-bottom: var(--SPACING-MD); 
+    padding-bottom: var(--SPACING-SM); 
     border-bottom: var(--SPACING-2S) solid var(--DARK-BORDER); 
   }
   
@@ -179,7 +180,7 @@ font-size: var(--FS-SM);
   .expandable-btn .btn-content {
     font-size: var(--FS-MD); 
     line-height: 1.6; 
-    text-align: right; 
+    text-align: justify; 
     color: var(--BGCOLOR);
   }
 
