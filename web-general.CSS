@@ -67,8 +67,8 @@ body {
 /* تم نقل الوان اللايت مود الى اسفل صفحة الجينيرال وسيتم اختبار الثيم على الهاتف بعد رفع الكود */
 @media (prefers-color-scheme: light){
   :root {
-    --BGCOLOR: rgb(225, 225, 225);
-    --ALT-BGCOLOR: #333;
+    --BGCOLOR: pink;
+    --ALT-BGCOLOR: #4c1515;
     --LOW-OPACITY-SH: rgba(0, 0, 0, 0.35);
     --MID-OPACITY-SH: rgba(0, 0, 0, 0.5);
     --LIGHT-SHADOW: rgb(0, 0, 0);
