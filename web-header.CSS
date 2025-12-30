@@ -24,11 +24,10 @@ header .header-container{
   color: var(--BGCOLOR);
   border: var(--SPACING-XS) solid var(--DARK-BORDER);
   font-size: var( --FS-XXL);
-  text-decoration: none;
   padding: 0 var(--SPACING-SM);
   transition: all 0.1s;
-  
 }
+
 .header-container .logo:hover{
   color: var(--ALT-BGCOLOR);
   background-color: var(--BGCOLOR);

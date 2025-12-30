@@ -59,6 +59,7 @@ input:checked + .expandable-btn .btn-title{
   font-size:var(--FS-SM);
   font-weight: 600;
   text-align:justify;
+  word-spacing: 0;
 }
 
 
@@ -67,18 +68,19 @@ main .timeline-container{
   flex-direction: column;
   margin: var(--SPACING-HEIGHT-XL) var(--SPACING-HEIGHT-L);
   border-right: var(--SPACING-XS) solid var(--LIGHT-BORDER);
+   
 }
 
 .timeline-item{
   position: relative;
-  margin-bottom: var(--SPACING-HEIGHT-L);
+  padding-bottom: var(--SPACING-HEIGHT-L);
   padding-right: var(--SPACING-XL);
 }
 
 .timeline-item::before{
   content: '';
   position: absolute;
-  top: -2px;
+  top: -5px;
   right:-18px;
   height: var(--SPACING-XL);
   width: var(--SPACING-XL);
@@ -111,7 +113,95 @@ main .timeline-container{
 .timeline-item .description{
   font-size: var(--FS-SM);
   text-align:justify;
+  word-spacing: 0;
 }
+
+.timeline-item:nth-child(-n + 1){
+  box-shadow: 15px 2px 6px -8px var(--LIGHT-SHADOW);
+}
+.timeline-item:nth-child(-n + 2)::before{
+  box-shadow: 0 0 10px 5px var(--LIGHT-SHADOW);
+}
+.timeline-item:first-child .period{
+  text-decoration: line-through;
+}
+
+.notes-phones {
+  display: none; /* إخفاء نسخة الـ details تماماً */
+}
+.timeline-item:first-child .notes{
+  position: absolute;
+  top:30%;
+  right: 50%;
+  transform: translateX(30%);
+  border: var(--SPACING-2S) solid var(--LIGHT-BORDER);
+  padding: var(--SPACING-SM);
+  box-shadow: 0 0 10px 5px var(--MID-OPACITY-SH);
+  transition: background-color 0.20s, color 0.20s, transform  0.20s;
+  cursor: pointer;
+  font-size: var(--FS-REG);
+  font-weight: 400;
+}
+.timeline-item:first-child .notes:hover{
+  background-color: var(--LOW-OPACITY-SH);
+  transform: translateX(30%) translateY(-5px);
+}
+.timeline-item:first-child .notes ul{
+  padding: var(--SPACING-MD) ;
+  border-top: var(--SPACING-2S) solid var(--LIGHT-BORDER);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* سيتم التفكير في فكرة افضل لصناديق تشييك التقدم
+ او ربما تحويلها الى صناديق للملاحظات الشهرية 
+
+main .checking-container{
+  display: grid ;
+  gap: var(--SPACING-MD);
+  grid-template-columns: repeat(3, minmax(200px, 500px ));
+  grid-template-rows: repeat(4, minmax(200px, 300px ));
+  text-align: center;
+  margin-bottom: var(--SPACING-HEIGHT-L);
+}
+
+.checking-container .checkbox-itme{
+  position: relative;
+  padding-right: var(--SPACING-XL);
+  border: var(--SPACING-XS) solid var(--LIGHT-BORDER);
+}
+
+.checking-container .checkbox-itme::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right:0;
+  height: var(--SPACING-XL);
+  width: var(--SPACING-XL);
+  background-color: var(--ALT-BGCOLOR);
+  color: var(--BGCOLOR);
+}
+
+.checking-container .checkbox-itme .period {
+  font-size: var(--FS-SM);
+  font-weight: 600;
+  margin-bottom: var(--SPACING-XS);
+}
+
+.checking-container .checkbox-itme .title{
+  font-size: var(--FS-SM);
+  font-weight: 700;
+  margin-bottom: var(--SPACING-SM);
+  border-bottom: var(--SPACING-2S) solid ;
+  border-right: var(--SPACING-2S) solid ;
+} */
+
+
+
+
 
 .outro-container{
   border: var(--SPACING-XS) solid var(--LIGHT-BORDER);
@@ -123,15 +213,6 @@ main .timeline-container{
   font-weight: 800;
   padding-bottom: var(--SPACING-XS);
 }
-
-.timeline-item:first-child::before{
-  box-shadow: 0 0 10px 5px var(--LIGHT-SHADOW);
-}
-/* هذا الكود سيجعل الخيط يتوقف عند آخر عنصر */
-.timeline-item:last-child {
-  margin-bottom: 0;
-}
-
 
 
 
@@ -189,14 +270,74 @@ main .timeline-container{
   .timeline-item .period { font-size: var(--FS-REG);}
   .timeline-item .description{ font-size: var(--FS-SM); }
   .timeline-item .skills{ font-size: var(--FS-REG);}
-
+  .timeline-item:first-child .notes{ display: none;}
   .outro-container{
     border: calc(var(--SPACING-XS) - 0.1rem) solid var(--LIGHT-BORDER);
     padding: var(--SPACING-MD) var(--SPACING-SM);
   }
+
+    
+  
+  /* إخفاء الملاحظات العائمة وإظهار نسخة الجوال */
+  article.timeline-item > .notes {
+    display: none !important;
+  }
+
+  .notes-phones {
+    display: block !important;
+    margin-top: var(--SPACING-MD);
+    width: 100%;
+  }
+
+  /* تنسيق حاوية التفاصيل */
+  .notes-phones details {
+    border: var(--SPACING-2S) solid var(--LIGHT-BORDER);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* تنسيق عنوان الملاحظات */
+  .notes-phones summary {
+    padding: var(--SPACING-SM);
+    background-color: var(--ALT-BGCOLOR);
+    color: var(--BGCOLOR);
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  /* تنسيق محتوى الملاحظات داخل الجوال */
+  .notes-phones .notes {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: var(--SPACING-SM) !important;
+    display: block !important;
+    cursor: default;
+  }
+
+  /* إلغاء خاصية الهوفر تماماً في الجوال */
+  .notes-phones .notes:hover {
+    transform: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* تنسيق القائمة الداخلية */
+  .notes-phones .notes ul {
+    border-top: 1px solid var(--LIGHT-BORDER);
+    padding: var(--SPACING-MD) var(--SPACING-SM);
+    margin-top: 5px;
+  }
+
   .outro-container p{
     font-size: var(--FS-SM);
     font-weight: 800;
     padding-bottom: var(--SPACING-XS);
   }
 }
+
+
+
+
