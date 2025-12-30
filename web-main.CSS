@@ -295,6 +295,7 @@ main .checking-container{
     border: var(--SPACING-2S) solid var(--LIGHT-BORDER);
     border-radius: var(--SPACING-XS);
     overflow: hidden;
+    box-shadow: 0 0 10px var(--MID-OPACITY-SH);
   }
 
   /* تنسيق عنوان الملاحظات */
