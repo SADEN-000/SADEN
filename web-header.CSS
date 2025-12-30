@@ -7,6 +7,7 @@ header{
   z-index: 1000;
   background-color: var(--ALT-BGCOLOR);
   color: var(--BGCOLOR);
+  border-radius: var(--SPACING-XS);
 }
 header .header-container{
   width: 95%;
@@ -25,6 +26,7 @@ header .header-container{
   border: var(--SPACING-XS) solid var(--DARK-BORDER);
   font-size: var( --FS-XXL);
   padding: 0 var(--SPACING-SM);
+  border-radius: var(--SPACING-XS);
   transition: all 0.1s;
 }
 
@@ -58,7 +60,8 @@ header .navbar-container{
   right: 50%;
   transform: translateX(50%);
   width: fit-content;
-  
+  border-radius: var(--SPACING-XS);
+
   z-index: 900;
   background-color: rgba(225, 225, 225, 0.1);
   backdrop-filter:blur(5px);

@@ -32,7 +32,7 @@ main .buttons-flex{
   cursor: pointer;
   padding: 0 0 0 var(--SPACING-SM);
   overflow:hidden;
-
+  border-radius: var(--SPACING-XS);
 }
 input:checked + .expandable-btn{
   width: 98%;
@@ -86,7 +86,7 @@ main .timeline-container{
   width: var(--SPACING-XL);
   background-color: var(--ALT-BGCOLOR);
   color: var(--BGCOLOR);
- 
+  border-radius: var(--SPACING-XS);
 }
 
 .timeline-item .period {
@@ -127,7 +127,7 @@ main .timeline-container{
 }
 
 .notes-phones {
-  display: none; /* إخفاء نسخة الـ details تماماً */
+  display: none; 
 }
 .timeline-item:first-child .notes{
   position: absolute;
@@ -135,6 +135,7 @@ main .timeline-container{
   right: 50%;
   transform: translateX(30%);
   border: var(--SPACING-2S) solid var(--LIGHT-BORDER);
+  border-radius: var(--SPACING-XS);
   padding: var(--SPACING-SM);
   box-shadow: 0 0 10px 5px var(--MID-OPACITY-SH);
   transition: background-color 0.20s, color 0.20s, transform  0.20s;
@@ -292,7 +293,7 @@ main .checking-container{
   /* تنسيق حاوية التفاصيل */
   .notes-phones details {
     border: var(--SPACING-2S) solid var(--LIGHT-BORDER);
-    border-radius: 8px;
+    border-radius: var(--SPACING-XS);
     overflow: hidden;
   }
 
