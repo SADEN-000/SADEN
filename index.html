@@ -1,11 +1,22 @@
 <!DOCTYPE html>
+<!--
+  Saden Portfolio - الموقع الشخصي لسَـادِنْ
+  يعرض الخطط والمشاريع باستخدام HTML/CSS فقط، مع التركيز على التصميم المتجاوب ومنهجية BEM للتنظيم.
+-->
 <html lang="ar" dir="rtl">
   <head>
+    <!--
+      Head Section: تحديد اللغة العربية والاتجاه من اليمين إلى اليسار لضمان التوافق مع النصوص العربية.
+      استخدام meta viewport للتصميم المتجاوب على الأجهزة المحمولة.
+    -->
     <title>Saden portfolio</title>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--
+      CSS Links: ربط ملفات الأنماط المنفصلة للفصل بين المحتوى والتصميم، مما يسهل الصيانة والتعديل.
+      استخدام Google Fonts لخط Tajawal لتحسين القراءة العربية.
+    -->
     <link rel="stylesheet" href="web-general.CSS">
     <link rel="stylesheet" href="web-header.CSS">
     <link rel="stylesheet" href="web-main.CSS">
@@ -15,31 +26,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div class="header-container">
-        <h1 href="#" class="logo">سَـادِنْ</h1>
-        <h2 class="tagline1"> هذا الموقع هو الأرشيف الفعلي لما أنجزه.</h2>
-        <a href="#" class="lang">العربية</a>
+    <!--
+      Header Block: يمثل الرأس الرئيسي للموقع، يحتوي على الشعار والتنقل.
+      مصمم باستخدام BEM للفصل بين العناصر، مع التركيز على الوضوح والوصولية.
+    -->
+    <header class="header">
+      <div class="header__container">
+        <h1 class="header__logo">سَـادِنْ</h1>
+        <h2 class="header__tagline"> هذا الموقع هو الأرشيف الفعلي لما أنجزه.</h2>
+        <a href="#" class="header__lang">العربية</a>
       </div>
 
-      <nav aria-label="Main navigation" class="navbar-container">
-        <ul class="nav-links">
-          <li><a href="#my-plans">كروت التعريف - الخطط</a></li>
-          <li><a href="#my-timeline">خارطة الطريق - المشاريع</a></li>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#my-plans" >كروت التعريف - الخطط</a></li>
+          <li><a class="nav__link" href="#my-timeline" >خارطة الطريق - المشاريع</a></li>
         </ul>
       </nav>
     </header>
 
-    
+    <!--
+      Main Section: يحتوي على المحتوى الرئيسي، مقسم إلى أقسام للخطط والمشاريع.
+      استخدام semantic HTML لتحسين الـ SEO والوصولية.
+    -->
+    <main class="main">
+      <!--
+        Cards Section: قسم الكروت التفاعلية لعرض الخطط الشخصية.
+        يستخدم checkboxes مخفية للتحكم في التوسع، مما يوفر تفاعلاً بدون JavaScript.
+      -->
+      <section id="my-plans" class="cards">
+        <details class="cards__note"><summary class="cards__summary">ملاحظة</summary>يمكنك الضغط على الكروت لترى محتواها:</details>
 
-    <main>
-      <section id="my-plans" class="buttons-flex">
-        <details><summary>ملاحظة</summary>يمكنك الضغط على الكروت لترى محتواها:</details>
-
-        <input type="checkbox" id="btn-1">
-        <label for="btn-1" class="expandable-btn">
-          <h2 class="btn-title">الشيفرة الشخصية..</h2>
-          <p class="btn-content">
+        <input type="checkbox" id="btn-1" class="cards__input">
+        <label for="btn-1" class="cards__item">
+          <h2 class="cards__title">الشيفرة الشخصية..</h2>
+          <p class="cards__content">
           سَـادِنْ.. اسم يعني لغويًا "خادم الكعبة" أو "حامي المقدس".
           اخترت هذا الاسم ليكون اسم الرقمي ولانه يمثل الحماية فأنا أؤمن بحماية المبادئ وحراسة الأهداف.
           انا كيان 
@@ -49,10 +70,10 @@
         </p>
         </label>
 
-        <input type="checkbox" id="btn-2">
-        <label for="btn-2" class="expandable-btn">
-          <h2 class="btn-title">المسار الاستراتيجي..</h2>
-          <p class="btn-content">
+        <input type="checkbox" id="btn-2" class="cards__input">
+        <label for="btn-2" class="cards__item">
+          <h2 class="cards__title">المسار الاستراتيجي..</h2>
+          <p class="cards__content">
             الهدف ليس مجرد وظيفة، بل مركز قيادة.
           البوصلة تشير نحو منصب Tech Lead و CTO خلال السنوات القادمة.
           الرحلة بدأت، والمسار مرسوم بدقة..
@@ -61,10 +82,10 @@
         </p>
         </label>
 
-        <input type="checkbox" id="btn-3">
-        <label for="btn-3" class="expandable-btn">
-          <h2 class="btn-title">العقيدة والغاية..</h2>
-          <p class="btn-content">
+        <input type="checkbox" id="btn-3" class="cards__input">
+        <label for="btn-3" class="cards__item">
+          <h2 class="cards__title">العقيدة والغاية..</h2>
+          <p class="cards__content">
             هذا الموقع هو "السجل الحي" لرحلة الصعود.
           الانطلاقة الفعلية كانت 1 ديسمبر 2025.
           هنا اوثق تحولي من هاوٍ إلى مهندس برمجيات.
@@ -73,10 +94,10 @@
         </p>
         </label>
 
-        <input type="checkbox" id="btn-4">
-        <label for="btn-4" class="expandable-btn">
-          <h2 class="btn-title">البنية التحتية..</h2>
-          <p class="btn-content">
+        <input type="checkbox" id="btn-4" class="cards__input">
+        <label for="btn-4" class="cards__item">
+          <h2 class="cards__title">البنية التحتية..</h2>
+          <p class="cards__content">
             ما تراه امامك ليس قالبًا جاهزًا.
           هذا الموقع بُني بالكامل يدويًا باستخدام HTML & CSS فقط.
           نتاج 7 أيام من التركيز المكثف بمتوسط 4 ساعات يوميًا.
@@ -86,10 +107,10 @@
         </p>
         </label>
 
-        <input type="checkbox" id="btn-5">
-        <label for="btn-5" class="expandable-btn">
-          <h2 class="btn-title">الوقود الفكري..</h2>
-          <p class="btn-content">
+        <input type="checkbox" id="btn-5" class="cards__input">
+        <label for="btn-5" class="cards__item">
+          <h2 class="cards__title">الوقود الفكري..</h2>
+          <p class="cards__content">
             البرمجة هي الأداة، لكن العقل هو المحرك.
           سَـادِنْ لا يكتفي بكتابة الكود، بل يغذي عقله بنهم مستمر.
           اهتماماته تتجاوز الشاشات.. من دراسة الاقتصاد والأنظمة المالية، إلى الغوص في الفلسفة، حتى الاساليب الفكرية وتعلم اللغات.
@@ -97,10 +118,10 @@
         </p>
         </label>
 
-        <input type="checkbox" id="btn-6">
-        <label for="btn-6" class="expandable-btn">
-          <h2 class="btn-title">بروتوكول التواصل..</h2>
-          <p class="btn-content">
+        <input type="checkbox" id="btn-6" class="cards__input">
+        <label for="btn-6" class="cards__item">
+          <h2 class="cards__title">بروتوكول التواصل..</h2>
+          <p class="cards__content">
             علاقاتي تخضع لقانون "القيمة مقابل الوقت".
           انا لست متاحًا للأحاديث الجانبية التي تستهلك الطاقة بلا طائل.
           قد انقطع عن التواصل لفترات طويلة.. احتراماً لانشغالي ببناء الذات.
@@ -110,18 +131,22 @@
 
       </section>
       
-      <section id="my-timeline" class="timeline-container">
+      <!--
+        Timeline Section: قسم الخط الزمني لعرض المشاريع والمهارات المكتسبة شهرياً.
+        يستخدم semantic elements لتحسين الـ SEO، مع تصميم يعكس التقدم الزمني.
+      -->
+      <section id="my-timeline" class="timeline">
       
             <!-- ديسمبر 2025: HTML & CSS (منتهية فعلياً) -->
-            <article class="timeline-item">
-                <time class="period" datetime="2025-12">ديسمبر 2025</time>
-                <h2 class="title">أساسيات الـ HTML & CSS (منجزة)</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2025-12">ديسمبر 2025</time>
+                <h2 class="timeline__title">أساسيات الـ HTML & CSS (منجزة)</h2>
+                <p class="timeline__description">
                     هذا الشهر يمثل المرحلة التأسيسية التي بُنيت عليها الخطة كلها. تم فيه إنهاء بنية الصفحات بـ HTML 
                     وتصميمها بـ CSS بشكل يجعل الانتقال إلى JavaScript منطقياً وسلساً.
                 </p>
-                <div class="skills">
-                        <strong>Mastered Skills:</strong>
+                <div class="timeline__skills">
+                        <strong>المهارات المطلوبة:</strong>
                         <ul>
                             <li>Semantic <abbr title="HyperText Markup Language">HTML</abbr></li>
                             <li>Box Model & border-box</li>
@@ -141,13 +166,15 @@
                             <li>Forms & Inputs</li>
                         </ul>
                 </div>
-               <div class="timeline-notes-provider">
 
-                    <div class="notes-phones">
-                        <details>
-                            <summary><h2>الملاحظات لهذا الشهر</h2></summary>
-                            <div class="notes">
-                                <ul>
+                <div class="timeline__notes--mobile">
+
+                        <details class="timeline__details">
+                            <summary class="timeline__summary">
+                                <h3 class="timeline__notes-title">الملاحظات لهذا الشهر</h3>
+                            </summary>
+                            <div class="timeline__notes-content">
+                                <ul class="timeline__list">
                                     <li>كانت اغلب المهارات سهلة في التعلم بشكل سلس وتأسست تأسيس جيد في المهارات المذكورة وعندي اساس صلب ابني عليه شهر يناير للسنة الجديدة بكل اريحية</li>
                                     <li>عندي مشاكل في اسماء الكلاسات احتاج ان اتدرب عليها اكثر مستقبلا</li>
                                     <li>عندي مشكلة المثالية بشكل واضح واضيع اوقات اكثر من اللازم في تفاصيل صغيرة</li>
@@ -156,9 +183,9 @@
                         </details>
                     </div>
                     
-                    <div class="notes">
-                        <h2>الملاحظات لهذا الشهر</h2>
-                        <ul>
+                    <div class="timeline__notes--desktop">
+                        <h3 class="timeline__notes-title">الملاحظات لهذا الشهر</h3>
+                        <ul class="timeline__list">
                             <li>كانت اغلب المهارات سهلة في التعلم بشكل سلس وتأسست تأسيس جيد في المهارات المذكورة وعندي اساس صلب ابني عليه شهر يناير للسنة الجديدة بكل اريحية</li>
                             <li>عندي مشاكل في اسماء الكلاسات احتاج ان اتدرب عليها اكثر مستقبلا</li>
                             <li>عندي مشكلة المثالية بشكل واضح واضيع اوقات اكثر من اللازم في تفاصيل صغيرة</li>
@@ -169,14 +196,14 @@
             </article>
                 
             <!-- يناير 2026: Core JavaScript -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-01">يناير 2026</time>
-                <h2 class="title">Core JavaScript (ES6+)</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-01">يناير 2026</time>
+                <h2 class="timeline__title">Core JavaScript (ES6+)</h2>
+                <p class="timeline__description">
                     بداية الدخول الحقيقي لعالم البرمجة المنطقية. هذا الشهر مخصص لإتقان أساسيات JavaScript الحديثة (ES6+) 
                     التي ستكون العمود الفقري لكل ما سيأتي بعدها من TypeScript و Next.js وباقي التقنيات.
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>المهارات المطلوبة:</strong>
                     <ul>
                         <li>Variables (let, const, var)</li>
@@ -193,14 +220,14 @@
             </article>
 
             <!-- فبراير 2026: JavaScript المتقدم -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-02">فبراير 2026</time>
-                <h2 class="title">JavaScript المتقدم & Async</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-02">فبراير 2026</time>
+                <h2 class="timeline__title">JavaScript المتقدم & Async</h2>
+                <p class="timeline__description">
                     التعمق في الجوانب المتقدمة للـ JavaScript. هذا الشهر يركز على البرمجة غير المتزامنة (Async) 
                     وفهم الـ Promises و Async/Await بالإضافة إلى الـ Classes حتى يكون الانتقال إلى TypeScript منطقياً.
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>المهارات المطلوبة:</strong>
                     <ul>
                         <li>Advanced Functions & Closures</li>
@@ -217,14 +244,14 @@
             </article>
 
             <!-- مارس 2026: TypeScript -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-03">مارس 2026</time>
-                <h2 class="title">TypeScript & Type Safety</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-03">مارس 2026</time>
+                <h2 class="timeline__title">TypeScript & Type Safety</h2>
+                <p class="timeline__description">
                     الانتقال من JavaScript الديناميكية إلى TypeScript ذات الـ Static Typing. 
                     هذه المرحلة تقلل الأخطاء وتجهز المشروع للعمل باحترافية عالية مع Next.js و Prisma.
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>المهارات المطلوبة:</strong>
                     <ul>
                         <li>Basic Types (string, number, boolean, unknown)</li>
@@ -241,14 +268,14 @@
             </article>
 
             <!-- أبريل 2026: Next.js + Tailwind -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-04">أبريل 2026</time>
-                <h2 class="title">Next.js Foundations + Tailwind CSS</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-04">أبريل 2026</time>
+                <h2 class="timeline__title">Next.js Foundations + Tailwind CSS</h2>
+                <p class="timeline__description">
                     الدخول في الإطار الموصى به رسمياً من React. هذا الشهر يركز على App Router في Next.js 
                     والتفريق بين Server Components و Client Components مع استخدام Tailwind لبناء واجهات سريعة واحترافية.[web:7][web:9]
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>المهارات المطلوبة:</strong>
                     <ul>
                         <li>App Router Structure</li>
@@ -265,14 +292,14 @@
             </article>
 
             <!-- مايو 2026: PostgreSQL & Prisma -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-05">مايو 2026</time>
-                <h2 class="title">PostgreSQL & Prisma ORM</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-05">مايو 2026</time>
+                <h2 class="timeline__title">PostgreSQL & Prisma ORM</h2>
+                <p class="timeline__description">
                     الانتقال من واجهات أمامية فقط إلى عالم الـ Full-Stack. تعلم PostgreSQL كقاعدة بيانات SQL 
                     مع Prisma ORM للتعامل مع البيانات باستخدام TypeScript بسهولة واحتراف.[web:7]
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>المهارات المطلوبة:</strong>
                     <ul>
                         <li>Database Design Basics</li>
@@ -288,14 +315,14 @@
             </article>
 
             <!-- يونيو 2026: Security & Auth -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-06">يونيو 2026</time>
-                <h2 class="title">Security & Authentication (NextAuth)</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-06">يونيو 2026</time>
+                <h2 class="timeline__title">Security & Authentication (NextAuth)</h2>
+                <p class="timeline__description">
                     مرحلة الحماية والحسابات. الهدف هو منع تسريب الـ API Keys، وضبط تسجيل الدخول للمستخدمين 
                     واستخدام Zod للتحقق من البيانات، مع تطبيق Rate Limiting لحماية السيرفرات من الاستهلاك الزائد.[web:3][web:6]
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>المهارات المطلوبة:</strong>
                     <ul>
                         <li>Environment Variables Management (.env)</li>
@@ -312,14 +339,14 @@
             </article>
 
             <!-- يوليو 2026: AI Integration -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-07">يوليو 2026</time>
-                <h2 class="title">AI Integration & APIs</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-07">يوليو 2026</time>
+                <h2 class="timeline__title">AI Integration & APIs</h2>
+                <p class="timeline__description">
                     إضافة طبقة الذكاء الاصطناعي للتطبيقات. هذا الشهر يركز على دمج OpenAI API 
                     مع Vercel AI SDK لبناء واجهات محادثة وميزات ذكية محسوبة التكلفة وآمنة.[web:5][web:11]
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>المهارات المطلوبة:</strong>
                     <ul>
                         <li>OpenAI <abbr title="Application Programming Interface">API</abbr> Integration</li>
@@ -334,14 +361,14 @@
             </article>
 
             <!-- أغسطس 2026: Project 1 -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-08">أغسطس 2026</time>
-                <h2 class="title">Project 1: Smart Dashboard</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-08">أغسطس 2026</time>
+                <h2 class="timeline__title">Project 1: Smart Dashboard</h2>
+                <p class="timeline__description">
                     أول مشروع احترافي يجمع كل ما سبق: Next.js + TypeScript + PostgreSQL + Prisma + NextAuth + AI. 
                     لوحة تحكم تعرض بيانات حقيقية من قاعدة البيانات مع تحليلات ورؤى مدعومة بالذكاء الاصطناعي.
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>يتضمن:</strong>
                     <ul>
                         <li>Next.js App Router</li>
@@ -355,14 +382,14 @@
             </article>
 
             <!-- سبتمبر 2026: Project 2 -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-09">سبتمبر 2026</time>
-                <h2 class="title">Project 2: SaaS Platform</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-09">سبتمبر 2026</time>
+                <h2 class="timeline__title">Project 2: SaaS Platform</h2>
+                <p class="timeline__description">
                     بناء منصة SaaS حقيقية مع نظام اشتراكات ودفع إلكتروني. الهدف إظهار فهم عميق لنماذج الأعمال 
                     وبناء منصات يمكن أن تحقق دخلاً مستمراً.
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>يتضمن:</strong>
                     <ul>
                         <li>User Authentication & Authorization</li>
@@ -376,17 +403,17 @@
             </article>
 
             <!-- أكتوبر 2026: Project 3 -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-10-26">أكتوبر 
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-10-26">أكتوبر 
                     | 26-10-2026  
                      تاريخ مهم |
                 </time>
-                <h2 class="title">Project 3: Educational AI App</h2>
-                <p class="description">
+                <h2 class="timeline__title">Project 3: Educational AI App</h2>
+                <p class="timeline__description">
                     تطبيق تعليمي تفاعلي يستخدم الذكاء الاصطناعي لتصحيح الإجابات (Auto-grading) 
                     وتوليد تغذية راجعة فورية. مشروع يبرز الإبداع والقدرة على دمج الـ AI في حل مشاكل حقيقية في التعليم.
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>يتضمن:</strong>
                     <ul>
                         <li>Quiz/Test Logic</li>
@@ -401,14 +428,14 @@
             </article>
 
             <!-- نوفمبر 2026: Refinement -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-11">نوفمبر 2026</time>
-                <h2 class="title">Refinement & Deployment</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-11">نوفمبر 2026</time>
+                <h2 class="timeline__title">Refinement & Deployment</h2>
+                <p class="timeline__description">
                     شهر مخصص لصقل المشاريع الثلاثة وتحويلها إلى مستوى Production. 
                     تحسين الأداء، إصلاح الأخطاء، تحسين تجربة المستخدم، وضمان جاهزية كل مشروع للعرض والوظائف.[web:3][web:9]
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>التركيز على:</strong>
                     <ul>
                         <li>Performance Optimization & Lighthouse Audits</li>
@@ -423,14 +450,14 @@
             </article>
 
             <!-- ديسمبر 2026: Job Hunt -->
-            <article class="timeline-item">
-                <time class="period" datetime="2026-12">ديسمبر 2026</time>
-                <h2 class="title">Job Hunt & Interview Preparation</h2>
-                <p class="description">
+            <article class="timeline__item">
+                <time class="timeline__period" datetime="2026-12">ديسمبر 2026</time>
+                <h2 class="timeline__title">Job Hunt & Interview Preparation</h2>
+                <p class="timeline__description">
                     الشهر الأخير مخصص للبحث الجدي عن وظيفة، مراجعة نهائية للمفاهيم، والتهيئة للمقابلات التقنية. 
                     الهدف أن تكون جاهز تماماً كـ Full-Stack Developer مع ثلاث مشاريع قوية في الـ Portfolio.[web:9]
                 </p>
-                <div class="skills">
+                <div class="timeline__skills">
                     <strong>التركيز على:</strong>
                     <ul>
                         <li>Technical Interview Preparation (JavaScript, TypeScript, Next.js)</li>
@@ -443,92 +470,15 @@
                 </div>
             </article>
         </section>
-
-       <!--  <section class="checking-container">
-                
-            يناير 2026: Core JavaScript 
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-01">يناير 2026</time>
-                <h2 class="title">Core JavaScript (ES6+)</h2>
-                <p>
-                    
-                </p>
-            </article>
-
-             فبراير 2026: JavaScript المتقدم 
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-02">فبراير 2026</time>
-                <h2 class="title">JavaScript المتقدم & Async</h2>
-            </article>
-
-             مارس 2026: TypeScript 
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-03">مارس 2026</time>
-                <h2 class="title">TypeScript & Type Safety</h2>
-            </article>
-
-            - أبريل 2026: Next.js + Tailwind -
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-04">أبريل 2026</time>
-                <h2 class="title">Next.js Foundations + Tailwind CSS</h2>
-            </article>
-
-            -- مايو 2026: PostgreSQL & Prisma --
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-05">مايو 2026</time>
-                <h2 class="title">PostgreSQL & Prisma ORM</h2>
-            </article>
-
-            -- يونيو 2026: Security & Auth --
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-06">يونيو 2026</time>
-                <h2 class="title">Security & Authentication (NextAuth)</h2>
-            </article>
-
-            -- يوليو 2026: AI Integration --
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-07">يوليو 2026</time>
-                <h2 class="title">AI Integration & APIs</h2>
-            </article>
-
-            -- أغسطس 2026: Project 1 --
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-08">أغسطس 2026</time>
-                <h2 class="title">Project 1: Smart Dashboard</h2>
-            </article>
-
-            -- سبتمبر 2026: Project 2 --
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-09">سبتمبر 2026</time>
-                <h2 class="title">Project 2: SaaS Platform</h2>
-            </article>
-
-            -- أكتوبر 2026: Project 3 --
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-10-26">أكتوبر 
-                    | 26-10-2026  
-                     تاريخ مهم |
-                </time>
-                <h2 class="title">Project 3: Educational AI App</h2>
-            </article>
-
-            -- نوفمبر 2026: Refinement --
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-11">نوفمبر 2026</time>
-                <h2 class="title">Refinement & Deployment</h2>
-            </article>
-
-            -- ديسمبر 2026: Job Hunt --
-            <article class="checkbox-itme">
-                <time class="period" datetime="2026-12">ديسمبر 2026</time>
-                <h2 class="title">Job Hunt & Interview Preparation</h2>
-            </article>
-        </section> -->
     </main>
 
-    <footer class="outro-container">
-        <p>والى هنا انتهي من بناء هذا الموقع بتاريخ <time datetime="2025-12-23">23 ديسمبر 2025</time></p>
-        <p>والقاكم في التحديثات الشهرية.. في رعاية اللّٰه.</p>
+    <!--
+      Footer Block: يمثل الخاتمة للموقع، يحتوي على تاريخ الإنجاز والتحديثات المستقبلية.
+      مصمم ببساطة للتركيز على المحتوى دون إلهاء.
+    -->
+    <footer class="outro">
+        <p class="outro__description">والى هنا انتهي من بناء هذا الموقع بتاريخ <time datetime="2025-12-23">23 ديسمبر 2025</time></p>
+        <p class="outro__description">والقاكم في التحديثات الشهرية.. في رعاية اللّٰه.</p>
     </footer>
 
   </body>

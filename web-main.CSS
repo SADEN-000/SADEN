@@ -1,13 +1,13 @@
-.buttons-flex details{
-  font-size: var(--FS-REG);
-}
-.buttons-flex details summary{
-  text-decoration:underline;
-  cursor: pointer;
-  font-size: var(--FS-REG);
-}
+/*
+  Web-Main.CSS: أنماط المحتوى الرئيسي للموقع، مقسمة إلى أقسام Cards وTimeline.
+  يركز على التفاعل والتصميم المتجاوب باستخدام BEM للتنظيم.
+*/
 
-main .buttons-flex{
+/*
+  Cards Section: قسم الكروت التفاعلية، يستخدم Flexbox للتنظيم العمودي.
+  margin-top مرتبط بارتفاع الرأس لتجنب التداخل.
+*/
+.main .cards{
   display: flex;        
   flex-direction: column; 
   align-items: flex-start; 
@@ -15,10 +15,30 @@ main .buttons-flex{
   gap: var(--SPACING-SM);
 }
 
-.buttons-flex input{
+/*
+  Cards Note Element: تصميم الملاحظة الأولية في القسم.
+*/
+.cards__note{
+  font-size: var(--FS-REG);
+}
+.cards__summary{
+  text-decoration:underline;
+  cursor: pointer;
+  font-size: var(--FS-REG);
+}
+
+/*
+  Cards Input Element: إخفاء checkbox للتحكم في التوسع دون JavaScript.
+*/
+.cards__input{
   display: none;
 }
-.buttons-flex .expandable-btn{
+
+/*
+  Cards Item Element: تصميم الكرت مع transition للتوسع السلس عند التحديد.
+  استخدام width كبير للتأثير الدرامي.
+*/
+.cards__item{
   width: calc( (var(--SPACING-HEIGHT-XL)) + var(--SPACING-HEIGHT-2XL) ) ;
   height: var(--SPACING-HEIGHT-XL);
   
@@ -34,13 +54,20 @@ main .buttons-flex{
   overflow:hidden;
   border-radius: var(--SPACING-XS);
 }
-input:checked + .expandable-btn{
+
+/*
+  Cards Item Checked State: تغيير الألوان والعرض عند التحديد لإظهار المحتوى.
+*/
+.cards__input:checked + .cards__item{
   width: 98%;
   color: var(--BGCOLOR);
   background-color: var(--ALT-BGCOLOR);
 }
 
-.expandable-btn .btn-title{
+/*
+  Cards Title Element: تصميم العنوان داخل الكرت، مع flex-shrink للحفاظ على الحجم.
+*/
+.cards__title{
   width: calc( (var(--SPACING-HEIGHT-XL)) + var(--SPACING-HEIGHT-2XL)) ;
   flex-shrink: 0;
   color: var(--ALT-BGCOLOR);
@@ -51,19 +78,29 @@ input:checked + .expandable-btn{
   transition: all 0.35s;
 }
 
-input:checked + .expandable-btn .btn-title{
+/*
+  Cards Title Checked State: تغيير اللون وإضافة حدود عند التحديد للتمييز.
+*/
+.cards__input:checked + .cards__item .cards__title{
   color: var(--BGCOLOR);
   border-left: calc(var(--SPACING-2S) - 0.1rem) solid var(--DARK-BORDER);
 }
-.expandable-btn .btn-content{
+
+/*
+  Cards Content Element: تصميم المحتوى النصي داخل الكرت، مع text-wrap للتوازن.
+*/
+.cards__content{
   font-size:var(--FS-SM);
   font-weight: 600;
-  text-align:justify;
-  word-spacing: 0;
+  text-align:center; 
+  text-wrap: balance;
 }
 
-
-main .timeline-container{
+/*
+  Timeline Section: قسم الخط الزمني، يستخدم Flexbox للتنظيم العمودي.
+  border-right لإنشاء خط زمني بصري.
+*/
+main .timeline{
   display:flex ;
   flex-direction: column;
   margin: var(--SPACING-HEIGHT-XL) var(--SPACING-HEIGHT-L);
@@ -71,13 +108,13 @@ main .timeline-container{
    
 }
 
-.timeline-item{
+.timeline__item{
   position: relative;
   padding-bottom: var(--SPACING-HEIGHT-L);
   padding-right: var(--SPACING-XL);
 }
 
-.timeline-item::before{
+.timeline__item::before{
   content: '';
   position: absolute;
   top: -5px;
@@ -89,7 +126,10 @@ main .timeline-container{
   border-radius: var(--SPACING-XS);
 }
 
-.timeline-item .period {
+/*
+  Timeline Period Element: تصميم التاريخ مع border-right للإشارة إلى الخط الزمني.
+*/
+.timeline__period {
   font-size: var(--FS-SM);
   font-weight: 600;
   margin-bottom: var(--SPACING-XS);
@@ -97,39 +137,46 @@ main .timeline-container{
   padding-right: var(--SPACING-XS);
 }
 
-.timeline-item .title{
+/*
+  Timeline Title Element: تصميم العنوان الرئيسي لكل عنصر زمني.
+*/
+.timeline__title{
   font-size: var(--FS-LG);
   font-weight: 700;
   margin-bottom: var(--SPACING-SM);
 }
 
-.timeline-item .description,
-.timeline-item .skills{
+.timeline__description,
+.timeline__skills{
   font-size: var(--FS-REG);
   font-weight: 400;
   color: var(--ALT-BGCOLOR);
 }
 
-.timeline-item .description{
+/*
+  Timeline Description Element: تخصيص الوصف مع text-align right للنصوص العربية.
+*/
+.timeline__description{
   font-size: var(--FS-SM);
-  text-align:justify;
-  word-spacing: 0;
+  text-align:right; 
+  text-wrap: balance;
+  margin-bottom: var(--SPACING-XS);
 }
 
-.timeline-item:nth-child(-n + 1){
+.timeline__item:nth-child(-n + 1){
   box-shadow: 15px 2px 6px -8px var(--LIGHT-SHADOW);
 }
-.timeline-item:nth-child(-n + 2)::before{
+.timeline__item:nth-child(-n + 2)::before{
   box-shadow: 0 0 10px 5px var(--LIGHT-SHADOW);
 }
-.timeline-item:first-child .period{
+.timeline__item:first-child .timeline__period{
   text-decoration: line-through;
 }
 
-.notes-phones {
+.timeline__notes--mobile {
   display: none; 
 }
-.timeline-item:first-child .notes{
+.timeline__notes--desktop{
   position: absolute;
   top:30%;
   right: 50%;
@@ -143,73 +190,25 @@ main .timeline-container{
   font-size: var(--FS-REG);
   font-weight: 400;
 }
-.timeline-item:first-child .notes:hover{
+.timeline__notes--desktop:hover{
   background-color: var(--LOW-OPACITY-SH);
   transform: translateX(30%) translateY(-5px);
 }
-.timeline-item:first-child .notes ul{
+.timeline__list{
   padding: var(--SPACING-MD) ;
   border-top: var(--SPACING-2S) solid var(--LIGHT-BORDER);
 }
 
-.timeline-item:last-child {
+.timeline__item:last-child {
   margin-bottom: 0;
 }
 
-
-/* سيتم التفكير في فكرة افضل لصناديق تشييك التقدم
- او ربما تحويلها الى صناديق للملاحظات الشهرية 
-
-main .checking-container{
-  display: grid ;
-  gap: var(--SPACING-MD);
-  grid-template-columns: repeat(3, minmax(200px, 500px ));
-  grid-template-rows: repeat(4, minmax(200px, 300px ));
-  text-align: center;
-  margin-bottom: var(--SPACING-HEIGHT-L);
-}
-
-.checking-container .checkbox-itme{
-  position: relative;
-  padding-right: var(--SPACING-XL);
-  border: var(--SPACING-XS) solid var(--LIGHT-BORDER);
-}
-
-.checking-container .checkbox-itme::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  right:0;
-  height: var(--SPACING-XL);
-  width: var(--SPACING-XL);
-  background-color: var(--ALT-BGCOLOR);
-  color: var(--BGCOLOR);
-}
-
-.checking-container .checkbox-itme .period {
-  font-size: var(--FS-SM);
-  font-weight: 600;
-  margin-bottom: var(--SPACING-XS);
-}
-
-.checking-container .checkbox-itme .title{
-  font-size: var(--FS-SM);
-  font-weight: 700;
-  margin-bottom: var(--SPACING-SM);
-  border-bottom: var(--SPACING-2S) solid ;
-  border-right: var(--SPACING-2S) solid ;
-} */
-
-
-
-
-
-.outro-container{
+.outro{
   border: var(--SPACING-XS) solid var(--LIGHT-BORDER);
   padding: var(--SPACING-LG) var(--SPACING-SM);
   text-align: center;
 }
-.outro-container p{
+.outro__description{
   font-size: var(--FS-LG);
   font-weight: 800;
   padding-bottom: var(--SPACING-XS);
@@ -219,13 +218,17 @@ main .checking-container{
 
 @media (max-width:850px) {
 
-  .buttons-flex {
+/*
+  Media Query: تعديلات للأجهزة المحمولة، تغيير التخطيط إلى عمودي لتوفير المساحة.
+*/
+
+  .main .cards {
     width: 90%;
     height: auto;
     margin: var(--SPACING-HEIGHT-L) auto ; 
   }
  
-  .buttons-flex .expandable-btn {
+  .cards__item {
     width: 100%;
     height: calc(var(--SPACING-HEIGHT-L) + var(--SPACING-SM) );
     border: none; 
@@ -237,21 +240,21 @@ main .checking-container{
     justify-content: flex-start; 
   }
 
-  .expandable-btn .btn-title {
+  .cards__title {
     font-size: var(--FS-LG); 
     width: 100%;
     border: none;
     text-align: right;
   }
 
-  input:checked + .expandable-btn {
+  .cards__input:checked + .cards__item {
     height: auto;
     width: 100%;
     padding-bottom: var(--SPACING-SM); 
     border-bottom: var(--SPACING-2S) solid var(--DARK-BORDER); 
   }
   
-  input:checked + .expandable-btn .btn-title {
+  .cards__input:checked + .cards__item .cards__title {
     line-height: 2; 
     margin: var(--SPACING-SM); 
     font-weight: bold;
@@ -259,85 +262,83 @@ main .checking-container{
     border-bottom: calc(var(--SPACING-2S) - 0.1rem) solid var(--DARK-BORDER);
   }
   
-  .expandable-btn .btn-content {
+  .cards__content {
     font-size: var(--FS-MD); 
     line-height: 1.6; 
-    text-align: justify; 
+    text-align:center; 
+    text-wrap: balance;
     color: var(--BGCOLOR);
   }
 
-  .timeline-container { margin: var(--SPACING-HEIGHT-L); }
-  .timeline-item .title{ font-size: var(--FS-LG); }
-  .timeline-item .period { font-size: var(--FS-REG);}
-  .timeline-item .description{ font-size: var(--FS-SM); }
-  .timeline-item .skills{ font-size: var(--FS-REG);}
-  .timeline-item:first-child .notes{ display: none;}
-  .outro-container{
+  .timeline { margin: var(--SPACING-HEIGHT-L); }
+  .timeline__period { font-size: var(--FS-REG);}
+  .timeline__title{ font-size: var(--FS-LG); }
+  .timeline__description{ font-size: var(--FS-SM); }
+  .timeline__skills{ font-size: var(--FS-REG);}
+  .outro{
     border: calc(var(--SPACING-XS) - 0.1rem) solid var(--LIGHT-BORDER);
     padding: var(--SPACING-MD) var(--SPACING-SM);
   }
 
-    
-  
-  /* إخفاء الملاحظات العائمة وإظهار نسخة الجوال */
-  article.timeline-item > .notes {
-    display: none !important;
+  /*
+    تبديل النسخ: إخفاء نسخة الديسكتوب وإظهار نسخة الجوال للملاحظات.
+  */
+  .timeline__notes--desktop {
+    display: none !important; /* إخفاء نسخة الديسكتوب */
   }
 
-  .notes-phones {
-    display: block !important;
+  .timeline__notes--mobile {
+    display: block !important; /* إظهار نسخة الجوال */
     margin-top: var(--SPACING-MD);
     width: 100%;
   }
 
-  /* تنسيق حاوية التفاصيل */
-  .notes-phones details {
+  /* 2. تنسيق حاوية التفاصيل (Details) */
+  .timeline__details {
     border: var(--SPACING-2S) solid var(--LIGHT-BORDER);
     border-radius: var(--SPACING-XS);
     overflow: hidden;
     box-shadow: 0 0 10px var(--MID-OPACITY-SH);
   }
 
-  /* تنسيق عنوان الملاحظات */
-  .notes-phones summary {
+  /* 3. تنسيق ملخص الملاحظات (Summary) */
+  .timeline__summary {
     padding: var(--SPACING-SM);
     background-color: var(--ALT-BGCOLOR);
     color: var(--BGCOLOR);
-    font-weight: bold;
     cursor: pointer;
-    list-style: none;
+    list-style: none; /* لإخفاء سهم المتصفح الافتراضي */
+  }
+  
+  /* تأكد أن العنوان داخل السامري لا يأخذ هوامش تكسر التصميم */
+  .timeline__notes-title {
+    margin: 0;
+    font-size: var(--FS-MD);
+    font-weight: bold;
+    color: inherit;
   }
 
-  /* تنسيق محتوى الملاحظات داخل الجوال */
-  .notes-phones .notes {
-    position: static !important;
-    transform: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    padding: var(--SPACING-SM) !important;
-    display: block !important;
-    cursor: default;
+  /* 4. تنسيق محتوى الملاحظات عند الفتح */
+  .timeline__notes-content {
+    background-color: transparent;
+    padding: var(--SPACING-SM);
   }
 
-  /* إلغاء خاصية الهوفر تماماً في الجوال */
-  .notes-phones .notes:hover {
-    transform: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-  }
-
-  /* تنسيق القائمة الداخلية */
-  .notes-phones .notes ul {
+  /* 5. تنسيق القائمة الداخلية */
+  .timeline__list {
     border-top: 1px solid var(--LIGHT-BORDER);
     padding: var(--SPACING-MD) var(--SPACING-SM);
-    margin-top: 5px;
+    margin-top: var(--SPACING-XS);
+    list-style: disc; /* استعادة النقاط */
   }
 
-  .outro-container p{
+  /* 6. تنسيق الخاتمة (Outro) */
+  .outro__description {
     font-size: var(--FS-SM);
     font-weight: 800;
     padding-bottom: var(--SPACING-XS);
   }
+
 }
 
 

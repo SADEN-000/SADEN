@@ -1,4 +1,12 @@
-header{
+/*
+  Web-Header.CSS: أنماط قسم الرأس (Header Block) في الموقع.
+  يستخدم position: fixed لتثبيت الرأس أعلى الصفحة، مع z-index عالي لضمان الظهور فوق المحتوى.
+*/
+
+/*
+  Header Block: تثبيت الرأس في الأعلى للوصول الدائم، مع خلفية فاتحة للتباين مع المحتوى.
+*/
+.header{
   position: fixed;
   top:0;
   right:0;
@@ -9,7 +17,11 @@ header{
   color: var(--BGCOLOR);
   border-radius: var(--SPACING-XS);
 }
-header .header-container{
+
+/*
+  Header Container Element: تنظيم العناصر داخل الرأس باستخدام Flexbox للتوزيع المتساوي.
+*/
+.header__container{
   width: 95%;
   height: 100%;
   margin: 0 auto;
@@ -21,7 +33,10 @@ header .header-container{
   position: relative;
 }
 
-.header-container .logo {
+/*
+  Header Logo Element: تصميم الشعار مع تأثيرات hover للتفاعل، باستخدام transition للسلاسة.
+*/
+.header__logo {
   color: var(--BGCOLOR);
   border: var(--SPACING-XS) solid var(--DARK-BORDER);
   font-size: var( --FS-XXL);
@@ -30,16 +45,20 @@ header .header-container{
   transition: all 0.1s;
 }
 
-.header-container .logo:hover{
+.header__logo:hover{
   color: var(--ALT-BGCOLOR);
   background-color: var(--BGCOLOR);
   border: var(--SPACING-XS) solid var(--DARKER-BORDER);
   cursor: pointer;
 }
-.header-container .logo:active{
+.header__logo:active{
   opacity: 0.8;
 }
-.header-container .tagline1, .lang{
+
+/*
+  Header Tagline and Lang Elements: تصميم النصوص والروابط في الرأس مع underline للإشارة إلى التفاعل.
+*/
+.header__tagline, .header__lang{
   color: var(--BGCOLOR);
   border-bottom: var(--SPACING-2S) solid var(--DARK-BORDER);
   text-decoration: none;
@@ -47,14 +66,18 @@ header .header-container{
   font-weight: 600;
   padding-bottom: var(--SPACING-XS);
 } 
-.header-container .tagline1{
+.header__tagline{
   position: absolute;
   right: 50%;
   transform: translateX(50%);
   width: fit-content;
 }
 
-header .navbar-container{
+/*
+  Nav Block: قائمة التنقل المثبتة تحت الرأس، مع backdrop-filter للتأثير الزجاجي.
+  استخدام position fixed للحفاظ على الظهور دون تداخل مع المحتوى.
+*/
+.nav{
   position: fixed;
   top: calc(var(--HEADER-HEIGHT) + var(--SPACING-LG));
   right: 50%;
@@ -72,14 +95,21 @@ header .navbar-container{
   padding: var(--SPACING-SM) var(--SPACING-LG);
 }
 
-.navbar-container .nav-links{
+/*
+  Nav List Element: تنظيم روابط التنقل باستخدام Flexbox للتوزيع الأفقي.
+*/
+.nav__list{
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap:var(--SPACING-LG);
   list-style: none;
 }
-.navbar-container .nav-links a{
+
+/*
+  Nav Link Element: تصميم الروابط مع underline خفيف للإشارة إلى التفاعل دون إفراط.
+*/
+.nav__link{
   white-space: nowrap;
   color:var(--ALT-BGCOLOR);
   text-decoration: none;
@@ -89,24 +119,25 @@ header .navbar-container{
   padding: var(--SPACING-XS) 0;
 }
 
-
-
+/*
+  Media Query: تعديلات للأجهزة المحمولة، تقليل الأحجام والحدود لتوفير المساحة.
+*/
 @media (max-width:850px) {
 
   header{ height: var(--HEADER-HEIGHT); }
   
 
-  .header-container .logo{ 
+  .header__logo{ 
     font-size: var(--FS-XXL); 
     border: calc(var(--SPACING-XS) - 0.1rem) solid var(--DARK-BORDER);
     padding: 0 var(--SPACING-XS);
   }
   
-  .header-container .logo:hover{
+  .header__logo:hover{
      border: calc(var(--SPACING-XS) - 0.1rem) solid var(--DARKER-BORDER);
   }
   
-  .header-container .tagline1{ 
+  .header__tagline{ 
     position:unset;
     transform:unset;
     font-size: var(--FS-XS);       
@@ -116,12 +147,12 @@ header .navbar-container{
     margin: 0 var(--SPACING-XS);
   }
 
-  .header-container .lang{ 
+  .header__lang{ 
     font-size: var(--FS-REG); 
     border-bottom: calc(var(--SPACING-2S) - 0.1rem) solid var(--DARK-BORDER);
   }
 
-  header .navbar-container{ top: calc(var(--HEADER-HEIGHT) + 1rem); padding: var(--SPACING-SM); }
-  .navbar-container .nav-links{ gap:var(--SPACING-MD); }
-  .navbar-container .nav-links a{ font-size: var(--FS-SM); }
+  .nav{ top: calc(var(--HEADER-HEIGHT) + 1rem); padding: var(--SPACING-SM); }
+  .nav__list{ gap:var(--SPACING-MD); }
+  .nav__link{ font-size: var(--FS-SM); }
 }
