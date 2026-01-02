@@ -225,7 +225,7 @@ main .timeline{
   .main .cards {
     width: 90%;
     height: auto;
-    margin: var(--SPACING-HEIGHT-L) auto ; 
+    margin: var(--HEADER-HEIGHT) auto ; 
   }
  
   .cards__item {
